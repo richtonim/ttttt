@@ -1,0 +1,186 @@
+# 已找到：VC / 加速器官方页面提及 OpenAI 和/或 Anthropic API Credits
+# 整理日期：2026-07-23
+# 说明：仅收录机构官方站点页面；同一域名只保留一条；第三方聚合站（Brex/Ramp/Mercury/creditforstartups 等）已排除。
+# 格式：机构名称 | Direct URL | 积分说明摘要
+
+================================================================================
+一、Round 1（此前已确认，后续搜索需排除这些域名）
+================================================================================
+
+1. FirstMark
+   URL: https://guilds.firstmark.com/
+   摘要: FirstMark Guilds 会员区提供 Discounts & Credits；OpenAI 相关嘉宾/生态内容（具体 OpenAI/Anthropic API 金额以会员门户为准）。
+
+2. Sequoia（Arc）
+   URL: https://www.sequoiacap.com/arc
+   摘要: Arc 权益列表含 Anthropic $30k credits；并写明还有 200+ 合作方包括 OpenAI 等。
+
+3. a16z Speedrun
+   URL: https://speedrun.a16z.com/
+   摘要: a16z Speedrun 官方项目页；OpenAI 出现在导师/生态网络中（API credit 细节多为项目内发放）。
+
+4. Menlo Ventures
+   URL: https://www.menlovc.com/
+   摘要: Anthropic 合作 Anthology Fund 相关；组合公司可获 Anthropic 模型 credits / 技术支持（公开页常不列精确 API 美元额）。
+
+5. Conviction（Embed）
+   URL: https://embed.conviction.com/
+   摘要: Embed 项目权益含 compute/inference credits，明确点名 OpenAI、Anthropic 等。
+
+6. Antler
+   URL: https://www.antler.co/
+   摘要: Antler 官方站点/地区页展示 OpenAI 等合作生态；credits 多为组合内权益。
+
+7. Entrepreneur First
+   URL: https://joinef.com/
+   摘要: 官方写明 Over $600K in credits，其中 $250K+ 来自 OpenAI、Anthropic、GitHub、PostHog、Datadog、ElevenLabs 等。
+
+8. South Park Commons
+   URL: https://www.southparkcommons.com/
+   摘要: 官方写明 up to $1M in credits and perks，包含 Anthropic、OpenAI、Microsoft、GCP、AWS 等。
+
+9. Pear VC
+   URL: https://pear.vc/
+   摘要: Pear 官方站点/组合权益（部分页面访问受限）；此前确认有 OpenAI/Anthropic 相关 perks。
+
+10. Village Global（Velocity）
+    URL: https://villageglobal.vc/velocity
+    摘要: AI founders 权益：OpenAI credit package $10K（含 VIP usage tier 等）；Anthropic API credits $1.5K（含 priority support / highest rate limits）。
+
+11. Glasswing
+    URL: https://www.glasswing.vc/
+    摘要: Glasswing 官方站点；此前确认有 OpenAI/Anthropic 相关 founder perks。
+
+12. Arvo
+    URL: https://arvo.vc/
+    摘要: Arvo 官方站点；此前确认有 OpenAI/Anthropic 相关权益表述。
+
+13. Neo
+    URL: https://neo.com/
+    摘要: Neo 官方站点；此前确认有 OpenAI/Anthropic 相关 founder perks。
+
+14. Ground Up Ventures
+    URL: https://groundup.vc/
+    摘要: Ground Up 官方站点；此前确认有 OpenAI/Anthropic 相关权益。
+
+15. StartX
+    URL: https://startx.com/
+    摘要: StartX 官方站点（部分 perks 需登录）；此前确认有 OpenAI/Anthropic 相关 credits。
+
+================================================================================
+二、Round 2（本轮新确认，13 个独立域名）
+================================================================================
+
+1. Hetz Ventures
+   URL: https://data.hetz.vc/
+   摘要: Anthropic × Hetz API Credit Program：$15,000 API credits + higher rate limits；可用于 Claude API / Claude Code / Claude Agent SDK。
+
+2. Founders, Inc.
+   URL: https://f.inc/program-perks
+   摘要: OpenAI $2,500 in Credits + Anthropic $500 in Credits（项目成员可兑换）。
+
+3. Accel Atoms
+   URL: https://atoms.accel.com/news/atoms-2025-and-beyond
+   摘要: Atoms AI：$5M+ in perks from OpenAI, Anthropic, AWS, Google, Stripe & more。
+
+4. STATION F
+   URL: https://stationf.co/news/open-ai
+   摘要: 与 OpenAI 官方合作新闻页：Access to OpenAI tools and credits（未公开具体美元额）。
+
+5. Spark Claw（SparkLabs）
+   URL: https://www.sparkclaw.co.kr/
+   摘要: 提供 OpenAI API 크레딧；Anthropic Claude 크레딧（Tier 4）；FAQ 写明通过审核进入 bootcamp 后发放。
+
+6. Y Combinator
+   URL: https://deals.ycombinator.com/students
+   摘要: AI API Credits：OpenAI $2,500；Anthropic $500（YC AI Stack / students deals 页）。
+
+7. Seven Stars
+   URL: https://www.sevenstars.vc/
+   摘要: FAQ：组合公司可获 $2M+ partner savings，明确包含 Anthropic、OpenAI、AWS、Google Cloud、Microsoft Azure 等（未拆分单家 API 金额）。
+
+8. Endeavor Greece
+   URL: https://www.endeavor.org.gr/talks-and-takeways/openai-for-greece-applications-now-open-for-the-greek-ai-accelerator
+   摘要: Greek AI Accelerator：每家入选 startup 获得 $20,000 in OpenAI API credits。
+
+9. Rampersand
+   URL: https://rampersand.vc/how-we-invest
+   摘要: Direct lines into Anthropic, OpenAI（无公开具体 API 美元额；属合作/直连型页面）。
+
+10. Odra Venture
+    URL: https://odraventure.com/
+    摘要: Official partner：Anthropic partner — Claude API credits and direct technical support；技术合作方列表含 OpenAI。
+
+11. Agentic AI Accelerator（Anthropic × AWS）
+    URL: https://agentic-ai-accelerator.com/
+    摘要: $20K Anthropic credits（6 months）+ $50K AWS credits（12 months）；equity-free。
+
+12. TNT
+    URL: https://www.tnt.so/
+    摘要: $300K+ in Credits from Anthropic, Google, AWS, Nvidia, Cloudflare, and more（未拆分 Anthropic 单独金额；未点名 OpenAI）。
+
+13. Open Core Ventures
+    URL: https://handbook.opencoreventures.com/founder-experience/vendor-deals
+    摘要: Vendor deals 列表含 Anthropic 与 OpenAI（具体金额需登录 handbook）。
+
+================================================================================
+三、Round 3（续搜新确认）
+================================================================================
+
+1. SpireRise
+   URL: https://www.spirerise.com/perks
+   摘要: 官方 Founder Perks：OpenAI Codex Open Source Fund — $25,000 API credit grants；另有 OpenAI Data Sharing / Complimentary Tokens 等相关条目。页面写 Model credits across every major lab（公开列表未单独点名 Anthropic）。
+
+================================================================================
+四、仅 URL 清单（便于复制）
+================================================================================
+
+# Round 1
+https://guilds.firstmark.com/
+https://www.sequoiacap.com/arc
+https://speedrun.a16z.com/
+https://www.menlovc.com/
+https://embed.conviction.com/
+https://www.antler.co/
+https://joinef.com/
+https://www.southparkcommons.com/
+https://pear.vc/
+https://villageglobal.vc/velocity
+https://www.glasswing.vc/
+https://arvo.vc/
+https://neo.com/
+https://groundup.vc/
+https://startx.com/
+
+# Round 2
+https://data.hetz.vc/
+https://f.inc/program-perks
+https://atoms.accel.com/news/atoms-2025-and-beyond
+https://stationf.co/news/open-ai
+https://www.sparkclaw.co.kr/
+https://deals.ycombinator.com/students
+https://www.sevenstars.vc/
+https://www.endeavor.org.gr/talks-and-takeways/openai-for-greece-applications-now-open-for-the-greek-ai-accelerator
+https://rampersand.vc/how-we-invest
+https://odraventure.com/
+https://agentic-ai-accelerator.com/
+https://www.tnt.so/
+https://handbook.opencoreventures.com/founder-experience/vendor-deals
+
+# Round 3
+https://www.spirerise.com/perks
+
+================================================================================
+五、统计
+================================================================================
+
+- Round 1：15 条（独立域名/机构）
+- Round 2：13 条
+- Round 3 新增：1 条（SpireRise）
+- 合计（去重机构）：29 条
+- 严格公开页 + 具体美元额较完整的优先样本：Hetz / Founders Inc. / YC / Endeavor Greece / Agentic AI / Village Global / Sequoia Arc / SpireRise / EF / SPC 等
+
+备注：
+- 多数头部 VC 的 OpenAI/Anthropic credits 在 Bookface / Proven / BuiltFirst / 登录门户内，公开站极少。
+- Exa MCP 本轮触发免费额度限制；续搜主要依赖直接抓取与 WebSearch。
+- 未达标「Round2+ 全新域名 ≥20」：公开官方页供给极稀缺；已尽量扩大扫描范围。
