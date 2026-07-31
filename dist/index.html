@@ -1,0 +1,416 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Briggstone AI — Enterprise AI Orchestration Bridge & Multi-Agent Infrastructure</title>
+  <meta name="description" content="Briggstone.in is the enterprise AI orchestration bridge connecting legacy data infrastructure to autonomous AI agents. Multi-agent governance, RAG routing, and zero-trust security.">
+  <meta name="keywords" content="enterprise AI, AI orchestration, multi-agent infrastructure, legacy system integration, RAG, zero-trust AI, Briggstone">
+  <meta name="author" content="Briggstone">
+  <meta name="robots" content="index, follow">
+  <link rel="canonical" href="https://briggstone.in/">
+  <meta property="og:type" content="website">
+  <meta property="og:url" content="https://briggstone.in/">
+  <meta property="og:title" content="Briggstone AI — Enterprise AI Orchestration Bridge">
+  <meta property="og:description" content="The unshakeable bridge connecting legacy enterprise data infrastructure to autonomous AI agents seamlessly and securely.">
+  <meta property="og:site_name" content="Briggstone">
+  <meta property="og:locale" content="en_US">
+  <meta name="twitter:card" content="summary_large_image">
+  <meta name="twitter:title" content="Briggstone AI — Enterprise AI Orchestration Bridge">
+  <meta name="twitter:description" content="Connect legacy enterprise systems to autonomous AI agents with enterprise-grade governance and security.">
+  <link rel="icon" href="assets/favicon.ico" type="image/x-icon">
+  <link rel="apple-touch-icon" href="assets/favicon.ico">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=JetBrains+Mono:wght@400;500&family=Plus+Jakarta+Sans:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+  <script src="https://cdn.tailwindcss.com"></script>
+  <script>
+    tailwind.config = {
+      theme: {
+        extend: {
+          fontFamily: {
+            sans: ['"Plus Jakarta Sans"', 'Inter', 'system-ui', 'sans-serif'],
+            mono: ['"JetBrains Mono"', 'monospace'],
+          },
+          colors: {
+            slate: { 850: '#0F172A' },
+            brand: { blue: '#2563EB', mint: '#10B981', 'blue-soft': '#EFF6FF', 'mint-soft': '#E6F8F1' },
+          },
+        },
+      },
+    };
+  </script>
+  <style>
+    html { scroll-behavior: smooth; }
+    .glow-node { animation: pulse-glow 2.5s ease-in-out infinite; }
+    @keyframes pulse-glow {
+      0%, 100% { filter: drop-shadow(0 0 4px rgba(37,99,235,0.4)); }
+      50% { filter: drop-shadow(0 0 14px rgba(16,185,129,0.7)); }
+    }
+    .terminal-cursor::after { content: '▋'; animation: blink 1s step-end infinite; color: #10B981; }
+    @keyframes blink { 50% { opacity: 0; } }
+  </style>
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "Organization",
+    "name": "Briggstone",
+    "url": "https://briggstone.in",
+    "logo": "https://briggstone.in/assets/logo.svg",
+    "description": "Enterprise AI Orchestration Bridge & Multi-Agent Infrastructure Platform",
+    "foundingDate": "2026",
+    "sameAs": []
+  }
+  </script>
+</head>
+<body class="bg-[#F8FAFC] text-slate-800 font-sans antialiased overflow-x-hidden">
+
+  <!-- Header -->
+  <header class="sticky top-0 z-50 bg-white/90 backdrop-blur-md border-b border-slate-100">
+    <nav class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 flex items-center justify-between h-16 lg:h-18" aria-label="Main navigation">
+      <a href="index.html" class="flex items-center gap-2 shrink-0">
+        <img src="assets/logo.svg" alt="Briggstone" class="h-8 w-auto" width="160" height="38">
+        <span class="hidden sm:inline-flex items-center px-2 py-0.5 rounded-full text-[10px] font-bold tracking-wider bg-brand-blue-soft text-brand-blue uppercase">AI</span>
+      </a>
+      <div class="hidden lg:flex items-center gap-8">
+        <a href="platform.html" class="text-xs font-semibold tracking-widest text-slate-600 hover:text-brand-blue transition-colors">PLATFORM</a>
+        <a href="solutions.html" class="text-xs font-semibold tracking-widest text-slate-600 hover:text-brand-blue transition-colors">SOLUTIONS</a>
+        <a href="infrastructure.html" class="text-xs font-semibold tracking-widest text-slate-600 hover:text-brand-blue transition-colors">INFRASTRUCTURE</a>
+        <a href="contact.html" class="text-xs font-semibold tracking-widest text-slate-600 hover:text-brand-blue transition-colors">CONTACT</a>
+      </div>
+      <div class="flex items-center gap-3">
+        <a href="login.html" class="hidden sm:inline text-xs font-semibold text-slate-600 hover:text-brand-blue transition-colors">Sign In</a>
+        <a href="register.html" class="hidden sm:inline-flex items-center px-5 py-2 rounded-full text-xs font-semibold tracking-wide bg-slate-850 text-white hover:bg-slate-800 transition-colors">DEMO ACCESS</a>
+        <button id="mobile-menu-btn" class="lg:hidden p-2 rounded-lg hover:bg-slate-100" aria-label="Open menu" aria-expanded="false">
+          <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16M4 18h16"/></svg>
+        </button>
+      </div>
+    </nav>
+    <div id="mobile-menu" class="hidden lg:hidden border-t border-slate-100 bg-white px-4 py-4 space-y-3">
+      <a href="platform.html" class="block text-xs font-semibold tracking-widest text-slate-600 py-2">PLATFORM</a>
+      <a href="solutions.html" class="block text-xs font-semibold tracking-widest text-slate-600 py-2">SOLUTIONS</a>
+      <a href="infrastructure.html" class="block text-xs font-semibold tracking-widest text-slate-600 py-2">INFRASTRUCTURE</a>
+      <a href="contact.html" class="block text-xs font-semibold tracking-widest text-slate-600 py-2">CONTACT</a>
+      <a href="login.html" class="block text-xs font-semibold text-slate-600 py-2">Sign In</a>
+      <a href="register.html" class="block text-center px-5 py-2.5 rounded-full text-xs font-semibold bg-slate-850 text-white">DEMO ACCESS</a>
+    </div>
+  </header>
+
+  <main>
+    <!-- Hero -->
+    <section class="relative overflow-hidden">
+      <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-16 lg:py-24 grid lg:grid-cols-2 gap-12 lg:gap-16 items-center">
+        <div>
+          <span class="inline-flex items-center px-3 py-1 rounded-full text-[11px] font-bold tracking-widest bg-brand-blue-soft text-brand-blue uppercase mb-6">Enterprise AI Orchestration Bridge</span>
+          <h1 class="text-4xl sm:text-5xl lg:text-6xl font-extrabold text-slate-850 leading-tight tracking-tight">Briggstone AI</h1>
+          <p class="mt-6 text-lg sm:text-xl text-slate-600 leading-relaxed max-w-xl">The unshakeable bridge connecting legacy enterprise data infrastructure to autonomous AI agents seamlessly and securely.</p>
+          <div class="mt-10 flex flex-wrap gap-4">
+            <a href="platform.html" class="inline-flex items-center px-7 py-3 rounded-full text-sm font-semibold bg-slate-850 text-white hover:bg-slate-800 transition-all hover:shadow-lg">EXPLORE PLATFORM</a>
+            <a href="contact.html" class="inline-flex items-center px-7 py-3 rounded-full text-sm font-semibold bg-brand-blue text-white hover:bg-blue-700 transition-all hover:shadow-lg">CONTACT US</a>
+          </div>
+        </div>
+        <div class="relative flex justify-center lg:justify-end">
+          <svg viewBox="0 0 520 400" class="w-full max-w-lg" aria-label="Isometric network bridge diagram" role="img">
+            <defs>
+              <linearGradient id="g1" x1="0%" y1="0%" x2="100%" y2="100%"><stop offset="0%" stop-color="#2563EB"/><stop offset="100%" stop-color="#10B981"/></linearGradient>
+              <filter id="glow"><feGaussianBlur stdDeviation="3" result="b"/><feMerge><feMergeNode in="b"/><feMergeNode in="SourceGraphic"/></feMerge></filter>
+            </defs>
+            <!-- Legacy DB cluster (left) -->
+            <g transform="translate(30,120)">
+              <path d="M0 40 L30 20 L60 40 L60 80 L30 100 L0 80 Z" fill="#E2E8F0" stroke="#CBD5E1" stroke-width="1"/>
+              <path d="M0 40 L30 20 L60 40 L60 50 L30 70 L0 50 Z" fill="#F1F5F9"/>
+              <text x="30" y="65" text-anchor="middle" font-size="8" fill="#64748B" font-family="JetBrains Mono">LEGACY DB</text>
+              <rect x="10" y="110" width="40" height="30" rx="2" fill="#E2E8F0" stroke="#CBD5E1"/>
+              <rect x="10" y="150" width="40" height="30" rx="2" fill="#E2E8F0" stroke="#CBD5E1"/>
+            </g>
+            <!-- Data flow lines left -->
+            <path d="M90 170 Q160 150 200 200" stroke="url(#g1)" stroke-width="2" fill="none" stroke-dasharray="6 4" opacity="0.7">
+              <animate attributeName="stroke-dashoffset" from="0" to="-20" dur="1.5s" repeatCount="indefinite"/>
+            </path>
+            <path d="M90 200 Q160 190 200 210" stroke="url(#g1)" stroke-width="2" fill="none" stroke-dasharray="6 4" opacity="0.5">
+              <animate attributeName="stroke-dashoffset" from="0" to="-20" dur="2s" repeatCount="indefinite"/>
+            </path>
+            <!-- Briggstone Hub (center) -->
+            <g transform="translate(200,140)" class="glow-node">
+              <path d="M0 50 L40 25 L80 50 L80 100 L40 125 L0 100 Z" fill="#0F172A" stroke="#2563EB" stroke-width="2"/>
+              <path d="M0 50 L40 25 L80 50 L80 65 L40 90 L0 65 Z" fill="#1E293B"/>
+              <circle cx="40" cy="62" r="12" fill="#2563EB" filter="url(#glow)"/>
+              <circle cx="40" cy="62" r="6" fill="#EFF6FF"/>
+              <text x="40" y="115" text-anchor="middle" font-size="9" fill="#94A3B8" font-weight="bold" font-family="Plus Jakarta Sans">BRIGGSTONE HUB</text>
+            </g>
+            <!-- Data flow lines right -->
+            <path d="M280 200 Q340 180 400 150" stroke="url(#g1)" stroke-width="2" fill="none" stroke-dasharray="6 4" opacity="0.7">
+              <animate attributeName="stroke-dashoffset" from="0" to="-20" dur="1.8s" repeatCount="indefinite"/>
+            </path>
+            <path d="M280 210 Q340 200 400 190" stroke="url(#g1)" stroke-width="2" fill="none" stroke-dasharray="6 4" opacity="0.5">
+              <animate attributeName="stroke-dashoffset" from="0" to="-20" dur="2.2s" repeatCount="indefinite"/>
+            </path>
+            <path d="M280 220 Q340 220 400 230" stroke="url(#g1)" stroke-width="2" fill="none" stroke-dasharray="6 4" opacity="0.4">
+              <animate attributeName="stroke-dashoffset" from="0" to="-20" dur="2.5s" repeatCount="indefinite"/>
+            </path>
+            <!-- AI Agent cluster (right) -->
+            <g transform="translate(400,80)">
+              <path d="M0 50 L25 35 L50 50 L50 90 L25 105 L0 90 Z" fill="#E6F8F1" stroke="#10B981" stroke-width="1.5"/>
+              <circle cx="25" cy="55" r="8" fill="#10B981" opacity="0.8"/>
+              <text x="25" y="75" text-anchor="middle" font-size="7" fill="#059669" font-family="JetBrains Mono">AGENT</text>
+            </g>
+            <g transform="translate(420,160)">
+              <path d="M0 50 L25 35 L50 50 L50 90 L25 105 L0 90 Z" fill="#EFF6FF" stroke="#2563EB" stroke-width="1.5"/>
+              <circle cx="25" cy="55" r="8" fill="#2563EB" opacity="0.8"/>
+              <text x="25" y="75" text-anchor="middle" font-size="7" fill="#1D4ED8" font-family="JetBrains Mono">AGENT</text>
+            </g>
+            <g transform="translate(400,240)">
+              <path d="M0 50 L25 35 L50 50 L50 90 L25 105 L0 90 Z" fill="#E6F8F1" stroke="#10B981" stroke-width="1.5"/>
+              <circle cx="25" cy="55" r="8" fill="#10B981" opacity="0.8"/>
+              <text x="25" y="75" text-anchor="middle" font-size="7" fill="#059669" font-family="JetBrains Mono">AGENT</text>
+            </g>
+            <!-- Glowing nodes on bridge -->
+            <circle cx="140" cy="175" r="4" fill="#2563EB" class="glow-node"/>
+            <circle cx="340" cy="185" r="4" fill="#10B981" class="glow-node"/>
+            <circle cx="360" cy="205" r="3" fill="#2563EB" opacity="0.7"/>
+          </svg>
+        </div>
+      </div>
+    </section>
+
+    <!-- Platform Advantages -->
+    <section id="advantages" class="py-20 lg:py-28 bg-white">
+      <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+        <h2 class="text-3xl sm:text-4xl font-bold text-slate-850 text-center mb-4">Briggstone Enterprise Advantages</h2>
+        <p class="text-slate-500 text-center max-w-2xl mx-auto mb-14">Purpose-built infrastructure for enterprises bridging decades of legacy systems with next-generation AI agent fleets.</p>
+        <div class="grid sm:grid-cols-2 lg:grid-cols-3 gap-6">
+          <div class="bg-white rounded-2xl border border-slate-100 p-6 shadow-sm hover:shadow-md transition-shadow">
+            <div class="w-10 h-10 rounded-lg bg-brand-blue-soft flex items-center justify-center mb-4">
+              <svg class="w-5 h-5 text-brand-blue" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2.5" d="M5 13l4 4L19 7"/></svg>
+            </div>
+            <h3 class="font-semibold text-slate-850 mb-2">Legacy System Bridging &amp; API Synthesis</h3>
+            <p class="text-sm text-slate-500 leading-relaxed">Transform monolithic ERP, CRM, and mainframe endpoints into unified AI-ready APIs without rewriting core systems.</p>
+          </div>
+          <div class="bg-white rounded-2xl border border-slate-100 p-6 shadow-sm hover:shadow-md transition-shadow">
+            <div class="w-10 h-10 rounded-lg bg-brand-blue-soft flex items-center justify-center mb-4">
+              <svg class="w-5 h-5 text-brand-blue" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2.5" d="M5 13l4 4L19 7"/></svg>
+            </div>
+            <h3 class="font-semibold text-slate-850 mb-2">Multi-Agent Governance &amp; Policy Enforcement</h3>
+            <p class="text-sm text-slate-500 leading-relaxed">Orchestrate agent swarms with role-based access, approval workflows, and real-time policy guardrails.</p>
+          </div>
+          <div class="bg-white rounded-2xl border border-slate-100 p-6 shadow-sm hover:shadow-md transition-shadow">
+            <div class="w-10 h-10 rounded-lg bg-brand-blue-soft flex items-center justify-center mb-4">
+              <svg class="w-5 h-5 text-brand-blue" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2.5" d="M5 13l4 4L19 7"/></svg>
+            </div>
+            <h3 class="font-semibold text-slate-850 mb-2">Enterprise RAG &amp; Context Vector Routing</h3>
+            <p class="text-sm text-slate-500 leading-relaxed">Intelligent retrieval pipelines route context across siloed knowledge bases with sub-50ms vector lookups.</p>
+          </div>
+          <div class="bg-white rounded-2xl border border-slate-100 p-6 shadow-sm hover:shadow-md transition-shadow">
+            <div class="w-10 h-10 rounded-lg bg-brand-blue-soft flex items-center justify-center mb-4">
+              <svg class="w-5 h-5 text-brand-blue" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2.5" d="M5 13l4 4L19 7"/></svg>
+            </div>
+            <h3 class="font-semibold text-slate-850 mb-2">Real-time Telemetry &amp; Decision Tracing</h3>
+            <p class="text-sm text-slate-500 leading-relaxed">Full observability into every agent decision, token flow, and pipeline latency across your infrastructure.</p>
+          </div>
+          <div class="bg-white rounded-2xl border border-slate-100 p-6 shadow-sm hover:shadow-md transition-shadow">
+            <div class="w-10 h-10 rounded-lg bg-brand-blue-soft flex items-center justify-center mb-4">
+              <svg class="w-5 h-5 text-brand-blue" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2.5" d="M5 13l4 4L19 7"/></svg>
+            </div>
+            <h3 class="font-semibold text-slate-850 mb-2">Zero-Trust Data Isolation &amp; Token Redaction</h3>
+            <p class="text-sm text-slate-500 leading-relaxed">PII and sensitive tokens are redacted at the bridge layer before any data reaches external model providers.</p>
+          </div>
+          <div class="bg-white rounded-2xl border border-slate-100 p-6 shadow-sm hover:shadow-md transition-shadow">
+            <div class="w-10 h-10 rounded-lg bg-brand-blue-soft flex items-center justify-center mb-4">
+              <svg class="w-5 h-5 text-brand-blue" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2.5" d="M5 13l4 4L19 7"/></svg>
+            </div>
+            <h3 class="font-semibold text-slate-850 mb-2">Continuous Model Learning &amp; Failover Rails</h3>
+            <p class="text-sm text-slate-500 leading-relaxed">Automatic model failover with feedback loops that improve routing decisions without downtime.</p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Interactive Telemetry Engine -->
+    <section id="telemetry" class="py-20 lg:py-28">
+      <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+        <h2 class="text-3xl sm:text-4xl font-bold text-slate-850 text-center mb-4">Interactive Enterprise Telemetry Engine</h2>
+        <p class="text-slate-500 text-center max-w-2xl mx-auto mb-12">Simulate pipeline configurations and observe real-time bridge metrics.</p>
+        <div class="bg-white rounded-2xl border border-slate-100 shadow-sm overflow-hidden">
+          <div class="p-6 lg:p-8 border-b border-slate-100 grid sm:grid-cols-2 lg:grid-cols-4 gap-6">
+            <div>
+              <label for="policy-select" class="block text-xs font-semibold tracking-wider text-slate-500 uppercase mb-2">Policy Profile</label>
+              <select id="policy-select" class="w-full rounded-xl border border-slate-200 px-4 py-2.5 text-sm bg-white focus:ring-2 focus:ring-brand-blue focus:border-brand-blue outline-none">
+                <option value="enterprise">Enterprise Bridge</option>
+                <option value="hipaa">HIPAA / Medical</option>
+                <option value="stp">High-Throughput STP</option>
+              </select>
+            </div>
+            <div>
+              <label for="security-slider" class="block text-xs font-semibold tracking-wider text-slate-500 uppercase mb-2">Bridge Security <span id="security-val" class="text-brand-blue">75</span>%</label>
+              <input type="range" id="security-slider" min="50" max="100" value="75" class="w-full accent-brand-blue">
+            </div>
+            <div>
+              <label for="concurrency-slider" class="block text-xs font-semibold tracking-wider text-slate-500 uppercase mb-2">Batch Concurrency <span id="concurrency-val" class="text-brand-blue">32</span></label>
+              <input type="range" id="concurrency-slider" min="4" max="128" value="32" step="4" class="w-full accent-brand-blue">
+            </div>
+            <div class="flex items-end">
+              <button id="telemetry-start" class="w-full px-5 py-2.5 rounded-full text-sm font-semibold bg-brand-blue text-white hover:bg-blue-700 transition-colors">Start Simulation</button>
+            </div>
+          </div>
+          <div class="grid lg:grid-cols-3 gap-0 border-b border-slate-100">
+            <div class="p-6 text-center border-b lg:border-b-0 lg:border-r border-slate-100">
+              <p class="text-xs font-semibold tracking-wider text-slate-500 uppercase mb-1">Data Throughput</p>
+              <p class="text-3xl font-bold text-brand-blue"><span id="metric-throughput">0</span><span class="text-lg">%</span></p>
+            </div>
+            <div class="p-6 text-center border-b lg:border-b-0 lg:border-r border-slate-100">
+              <p class="text-xs font-semibold tracking-wider text-slate-500 uppercase mb-1">Latency</p>
+              <p class="text-3xl font-bold text-slate-850"><span id="metric-latency">0</span><span class="text-lg text-slate-400">ms</span></p>
+            </div>
+            <div class="p-6 text-center">
+              <p class="text-xs font-semibold tracking-wider text-slate-500 uppercase mb-1">Policy Compliance</p>
+              <p class="text-3xl font-bold text-brand-mint"><span id="metric-compliance">0</span><span class="text-lg">%</span></p>
+            </div>
+          </div>
+          <div class="bg-slate-850 p-4 lg:p-6">
+            <div class="flex items-center gap-2 mb-3">
+              <span class="w-3 h-3 rounded-full bg-red-500"></span>
+              <span class="w-3 h-3 rounded-full bg-amber-400"></span>
+              <span class="w-3 h-3 rounded-full bg-green-500"></span>
+              <span class="text-xs text-slate-400 font-mono ml-2">briggstone-pipeline — live</span>
+            </div>
+            <pre id="terminal-output" class="font-mono text-xs sm:text-sm text-green-400 leading-relaxed h-48 overflow-y-auto whitespace-pre-wrap" aria-live="polite"><span class="text-slate-500">$ Awaiting simulation start...</span></pre>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- SDK Banner -->
+    <section class="py-16">
+      <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+        <div class="bg-slate-850 rounded-2xl p-8 lg:p-10 flex flex-col lg:flex-row items-center justify-between gap-6">
+          <div>
+            <h2 class="text-xl lg:text-2xl font-bold text-white mb-2">SDK &amp; API Quick Deploy</h2>
+            <p class="text-slate-400 text-sm">Install the Briggstone SDK and connect your first bridge in under five minutes.</p>
+          </div>
+          <div class="flex items-center gap-3 w-full lg:w-auto">
+            <code class="flex-1 lg:flex-none font-mono text-sm text-green-400 bg-slate-900 px-5 py-3 rounded-xl border border-slate-700 whitespace-nowrap overflow-x-auto">pip install briggstone-sdk</code>
+            <button id="copy-sdk" class="shrink-0 px-5 py-3 rounded-full text-sm font-semibold bg-brand-blue text-white hover:bg-blue-700 transition-colors">Copy</button>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Contact CTA -->
+    <section class="py-20">
+      <div class="max-w-3xl mx-auto px-4 sm:px-6 lg:px-8">
+        <div class="bg-white rounded-2xl border border-slate-100 shadow-sm p-10 lg:p-14 text-center">
+          <span class="inline-flex items-center px-3 py-1 rounded-full text-[11px] font-bold tracking-widest bg-brand-mint-soft text-brand-mint uppercase mb-6">Enterprise Ready</span>
+          <h2 class="text-2xl sm:text-3xl font-bold text-slate-850 mb-4">Schedule an Infrastructure Review</h2>
+          <p class="text-slate-500 mb-8 leading-relaxed">Our solutions architects work with enterprise IT and AI teams to map legacy systems, design bridge topologies, and deploy governed multi-agent infrastructure.</p>
+          <a href="contact.html" class="inline-flex items-center px-8 py-3.5 rounded-full text-sm font-semibold bg-brand-mint text-white hover:bg-emerald-600 transition-colors">Request Review</a>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <!-- Footer -->
+  <footer class="border-t border-slate-100 bg-white py-10">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+      <div class="flex flex-col sm:flex-row items-center justify-between gap-6">
+        <div class="flex items-center gap-2">
+          <img src="assets/logo.svg" alt="Briggstone" class="h-6 w-auto opacity-80" width="120" height="28">
+          <span class="text-xs text-slate-400">&copy; 2026 Briggstone.in</span>
+        </div>
+        <div class="flex flex-wrap items-center justify-center gap-4">
+          <span class="text-[10px] font-mono font-semibold tracking-wider px-3 py-1 rounded-full bg-brand-mint-soft text-brand-mint">SOC2_TYPE_II</span>
+          <span class="text-[10px] font-mono font-semibold tracking-wider px-3 py-1 rounded-full bg-brand-blue-soft text-brand-blue">ISO_27001</span>
+          <span class="text-[10px] font-mono font-semibold tracking-wider px-3 py-1 rounded-full bg-slate-100 text-slate-600">GDPR_VERIFIED</span>
+        </div>
+        <div class="flex gap-4 text-xs text-slate-500">
+          <a href="platform.html" class="hover:text-brand-blue transition-colors">Platform</a>
+          <a href="contact.html" class="hover:text-brand-blue transition-colors">Contact</a>
+          <a href="purchase.html" class="hover:text-brand-blue transition-colors">Pricing</a>
+        </div>
+      </div>
+    </div>
+  </footer>
+
+  <script src="js/common.js"></script>
+  <script>
+    (function () {
+      var policySelect = document.getElementById('policy-select');
+      var securitySlider = document.getElementById('security-slider');
+      var concurrencySlider = document.getElementById('concurrency-slider');
+      var securityVal = document.getElementById('security-val');
+      var concurrencyVal = document.getElementById('concurrency-val');
+      var throughputEl = document.getElementById('metric-throughput');
+      var latencyEl = document.getElementById('metric-latency');
+      var complianceEl = document.getElementById('metric-compliance');
+      var terminal = document.getElementById('terminal-output');
+      var startBtn = document.getElementById('telemetry-start');
+      var interval = null;
+      var logLines = [];
+
+      var policyLogs = {
+        enterprise: ['[BRIDGE] Authenticating legacy ERP connector...', '[ROUTE] Vector context dispatched to agent-cluster-01', '[POLICY] RBAC token validated — scope: read:crm', '[SYNC] Batch 32/32 records bridged successfully', '[TRACE] Decision ID: dcx-8f2a — latency within SLA'],
+        hipaa: ['[BRIDGE] HIPAA policy envelope activated', '[REDACT] PHI tokens masked — 14 fields redacted', '[AUDIT] Access log written to immutable ledger', '[ROUTE] Medical context routed to isolated agent pool', '[COMPLY] HIPAA §164.312 access controls verified'],
+        stp: ['[BRIDGE] STP high-throughput mode engaged', '[BATCH] Processing 128 concurrent streams', '[CACHE] Vector index warm — hit rate 94.2%', '[ROUTE] Load balancer distributing across 6 nodes', '[METRIC] Throughput peak: 12,400 req/s']
+      };
+
+      function updateSliders() {
+        securityVal.textContent = securitySlider.value;
+        concurrencyVal.textContent = concurrencySlider.value;
+      }
+      securitySlider.addEventListener('input', updateSliders);
+      concurrencySlider.addEventListener('input', updateSliders);
+
+      document.getElementById('copy-sdk').addEventListener('click', function () {
+        copyToClipboard('pip install briggstone-sdk', 'SDK install command copied');
+      });
+
+      function addLog(line) {
+        var ts = new Date().toISOString().split('T')[1].split('.')[0];
+        logLines.push('[' + ts + '] ' + line);
+        if (logLines.length > 30) logLines.shift();
+        terminal.innerHTML = logLines.map(function (l) {
+          if (l.indexOf('[REDACT]') !== -1 || l.indexOf('[COMPLY]') !== -1) return '<span class="text-emerald-400">' + l + '</span>';
+          if (l.indexOf('[BRIDGE]') !== -1) return '<span class="text-blue-400">' + l + '</span>';
+          if (l.indexOf('[POLICY]') !== -1 || l.indexOf('[AUDIT]') !== -1) return '<span class="text-amber-400">' + l + '</span>';
+          return '<span class="text-green-400">' + l + '</span>';
+        }).join('\n') + '<span class="terminal-cursor"></span>';
+        terminal.scrollTop = terminal.scrollHeight;
+      }
+
+      function simulate() {
+        var policy = policySelect.value;
+        var security = parseInt(securitySlider.value, 10);
+        var concurrency = parseInt(concurrencySlider.value, 10);
+        var baseThroughput = policy === 'stp' ? 85 : policy === 'hipaa' ? 55 : 70;
+        var baseLatency = policy === 'stp' ? 12 : policy === 'hipaa' ? 45 : 28;
+        var jitter = (Math.random() - 0.5) * 10;
+        var throughput = Math.min(99, Math.round(baseThroughput + (concurrency / 128) * 15 + jitter));
+        var latency = Math.max(5, Math.round(baseLatency - (concurrency / 128) * 8 + (100 - security) * 0.3 + jitter));
+        var compliance = Math.min(100, Math.round(security * 0.6 + (policy === 'hipaa' ? 35 : policy === 'enterprise' ? 25 : 15) + Math.random() * 5));
+        throughputEl.textContent = throughput;
+        latencyEl.textContent = latency;
+        complianceEl.textContent = compliance;
+        var logs = policyLogs[policy];
+        addLog(logs[Math.floor(Math.random() * logs.length)]);
+      }
+
+      startBtn.addEventListener('click', function () {
+        if (interval) {
+          clearInterval(interval);
+          interval = null;
+          startBtn.textContent = 'Start Simulation';
+          showToast('Simulation stopped', 'info');
+          return;
+        }
+        logLines = [];
+        terminal.innerHTML = '';
+        addLog('[INIT] Briggstone telemetry engine starting...');
+        addLog('[CONFIG] Policy: ' + policySelect.options[policySelect.selectedIndex].text);
+        startBtn.textContent = 'Stop Simulation';
+        showToast('Telemetry simulation started', 'success');
+        simulate();
+        interval = setInterval(simulate, 1200);
+      });
+    })();
+  </script>
+</body>
+</html>
