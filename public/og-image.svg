@@ -1,0 +1,19 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1200" height="630" viewBox="0 0 1200 630" fill="none">
+  <rect width="1200" height="630" fill="#0F0F12"/>
+  <defs>
+    <pattern id="grid" width="48" height="48" patternUnits="userSpaceOnUse">
+      <path d="M48 0H0V48" stroke="#E5E2DC" stroke-opacity="0.06" stroke-width="1"/>
+    </pattern>
+  </defs>
+  <rect width="1200" height="630" fill="url(#grid)"/>
+  <g stroke="#E5E2DC" stroke-opacity="0.35" stroke-width="1.5" fill="none">
+    <path d="M720 420 L940 300 L1160 420 L940 540 Z"/>
+    <path d="M720 420 L720 260 L940 140 L1160 260 L1160 420"/>
+    <path d="M940 140 L940 300"/>
+    <path d="M720 260 L940 380 L1160 260" stroke-opacity="0.2"/>
+  </g>
+  <circle cx="940" cy="380" r="6" fill="#E66A35"/>
+  <text x="80" y="250" fill="#E5E2DC" font-family="Arial, sans-serif" font-size="56" font-weight="700" letter-spacing="4">INTERIORPUP.AI</text>
+  <text x="80" y="320" fill="#E66A35" font-family="Arial, sans-serif" font-size="28" font-weight="600">Spatial Intelligence for Modern Interiors</text>
+  <text x="80" y="370" fill="#E5E2DC" fill-opacity="0.7" font-family="Arial, sans-serif" font-size="22">Prompt to 3D Space in Milliseconds.</text>
+</svg>
