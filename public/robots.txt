@@ -1,0 +1,7 @@
+User-agent: *
+Allow: /
+
+Disallow: /login/
+Disallow: /register/
+
+Sitemap: https://qualia.lat/sitemap.xml
