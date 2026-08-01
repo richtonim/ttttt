@@ -1,0 +1,420 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Vectoris.dev — High-Dimensional Vector Search & Embedding Engine</title>
+  <meta name="description" content="Vectoris.dev is the high-throughput vector database and ANN retrieval engine for sub-millisecond similarity search, billion-scale embeddings, and real-time Agent memory pipelines.">
+  <meta name="keywords" content="vector database, ANN search, embeddings, HNSW, multi-modal, AI infrastructure, vector search, similarity search, Vectoris">
+  <meta name="author" content="Vectoris.dev">
+  <meta name="robots" content="index, follow">
+  <link rel="canonical" href="https://vectoris.dev/">
+  <meta property="og:type" content="website">
+  <meta property="og:url" content="https://vectoris.dev/">
+  <meta property="og:title" content="Vectoris.dev — High-Dimensional Vector Search Engine">
+  <meta property="og:description" content="Sub-millisecond ANN retrieval, billion-scale embeddings, and real-time Agent memory pipelines for developers and AI architects.">
+  <meta property="og:image" content="https://vectoris.dev/assets/img/logo.svg">
+  <meta property="og:site_name" content="Vectoris.dev">
+  <meta name="twitter:card" content="summary_large_image">
+  <meta name="twitter:title" content="Vectoris.dev — Vector Search & Embedding Engine">
+  <meta name="twitter:description" content="High-throughput vector database engineered for AI architects and developers.">
+  <link rel="icon" href="assets/img/favicon.ico" type="image/x-icon">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=JetBrains+Mono:wght@400;500;600&family=Plus+Jakarta+Sans:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+  <script src="https://cdn.tailwindcss.com"></script>
+  <script>
+    tailwind.config = {
+      theme: {
+        extend: {
+          colors: {
+            deep: '#0F172A',
+            vector: '#4F46E5',
+            'vector-soft': '#EEF2FF',
+            mint: '#10B981',
+            'mint-soft': '#ECFDF5'
+          },
+          fontFamily: {
+            sans: ['Plus Jakarta Sans', 'Inter', 'sans-serif'],
+            mono: ['JetBrains Mono', 'monospace']
+          },
+          boxShadow: {
+            card: '0 10px 30px -5px rgba(15, 23, 42, 0.05)'
+          }
+        }
+      }
+    };
+  </script>
+  <style>
+    html { scroll-behavior: smooth; }
+    .glow-node { animation: pulse-glow 2.5s ease-in-out infinite; }
+  </style>
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "SoftwareApplication",
+    "name": "Vectoris.dev",
+    "applicationCategory": "DeveloperApplication",
+    "operatingSystem": "Cross-platform",
+    "description": "High-dimensional vector search and multi-modal embedding infrastructure for AI applications.",
+    "url": "https://vectoris.dev",
+    "offers": { "@type": "Offer", "price": "0", "priceCurrency": "USD", "availability": "https://schema.org/PreOrder" },
+    "publisher": { "@type": "Organization", "name": "Vectoris.dev", "url": "https://vectoris.dev" }
+  }
+  </script>
+</head>
+<body class="bg-[#FAFAFC] text-deep font-sans antialiased overflow-x-hidden">
+
+  <!-- Header -->
+  <header class="sticky top-0 z-50 bg-[#FAFAFC]/90 backdrop-blur-md border-b border-slate-100">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+      <div class="flex items-center justify-between h-16 lg:h-20">
+        <a href="index.html" class="flex items-center gap-2 shrink-0" aria-label="Vectoris.dev Home">
+          <img src="assets/img/logo.svg" alt="Vectoris.dev Logo" class="h-8 w-auto" width="160" height="32">
+        </a>
+        <nav class="hidden md:flex items-center gap-8" aria-label="Main navigation">
+          <a href="engine.html" class="text-xs font-semibold tracking-widest text-slate-600 hover:text-vector transition-colors uppercase">Engine</a>
+          <a href="solutions.html" class="text-xs font-semibold tracking-widest text-slate-600 hover:text-vector transition-colors uppercase">Solutions</a>
+          <a href="benchmarks.html" class="text-xs font-semibold tracking-widest text-slate-600 hover:text-vector transition-colors uppercase">Benchmarks</a>
+          <a href="documentation.html" class="text-xs font-semibold tracking-widest text-slate-600 hover:text-vector transition-colors uppercase">Documentation</a>
+        </nav>
+        <div class="flex items-center gap-3">
+          <a href="demo.html" class="hidden sm:inline-flex items-center px-5 py-2.5 rounded-full bg-deep text-white text-xs font-semibold tracking-wide hover:bg-slate-800 transition-colors uppercase">Live Demo</a>
+          <button id="mobile-menu-btn" class="md:hidden p-2 rounded-lg hover:bg-slate-100" aria-label="Toggle menu" aria-expanded="false">
+            <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16M4 18h16"/></svg>
+          </button>
+        </div>
+      </div>
+      <nav id="mobile-menu" class="hidden md:hidden pb-4 flex flex-col gap-3" aria-label="Mobile navigation">
+        <a href="engine.html" class="text-xs font-semibold tracking-widest text-slate-600 uppercase py-2">Engine</a>
+        <a href="solutions.html" class="text-xs font-semibold tracking-widest text-slate-600 uppercase py-2">Solutions</a>
+        <a href="benchmarks.html" class="text-xs font-semibold tracking-widest text-slate-600 uppercase py-2">Benchmarks</a>
+        <a href="documentation.html" class="text-xs font-semibold tracking-widest text-slate-600 uppercase py-2">Documentation</a>
+        <a href="demo.html" class="text-xs font-semibold tracking-widest text-vector uppercase py-2">Live Demo</a>
+      </nav>
+    </div>
+  </header>
+
+  <main>
+    <!-- Hero -->
+    <section class="relative max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 pt-12 lg:pt-20 pb-16 lg:pb-24">
+      <div class="grid lg:grid-cols-2 gap-12 lg:gap-8 items-center">
+        <div>
+          <span class="inline-flex items-center px-4 py-1.5 rounded-full bg-vector-soft text-vector text-xs font-semibold tracking-wide uppercase mb-6">High-Dimensional Vector & Embedding Engine</span>
+          <h1 class="text-4xl sm:text-5xl lg:text-6xl font-extrabold text-deep leading-tight tracking-tight mb-6">Vectoris.dev</h1>
+          <p class="text-lg text-slate-600 leading-relaxed mb-8 max-w-xl">The high-throughput vector database and ANN retrieval engine. Engineered for sub-millisecond similarity search, billion-scale embeddings, and real-time Agent memory pipelines.</p>
+          <div class="flex flex-wrap gap-4">
+            <a href="engine.html" class="inline-flex items-center px-7 py-3.5 rounded-full bg-deep text-white text-sm font-semibold tracking-wide hover:bg-slate-800 transition-colors uppercase">Explore Engine</a>
+            <a href="benchmarks.html" class="inline-flex items-center px-7 py-3.5 rounded-full bg-vector text-white text-sm font-semibold tracking-wide hover:bg-indigo-600 transition-colors uppercase">Test Benchmarks</a>
+          </div>
+        </div>
+        <div class="relative flex justify-center lg:justify-end">
+          <svg viewBox="0 0 480 400" class="w-full max-w-lg" aria-label="Isometric vector matrix diagram showing multi-modal embeddings clustering into Vectoris Index Hub" role="img">
+            <defs>
+              <linearGradient id="hubGrad" x1="0%" y1="0%" x2="100%" y2="100%">
+                <stop offset="0%" stop-color="#4F46E5"/><stop offset="100%" stop-color="#6366F1"/>
+              </linearGradient>
+              <filter id="glow"><feGaussianBlur stdDeviation="3" result="b"/><feMerge><feMergeNode in="b"/><feMergeNode in="SourceGraphic"/></feMerge></filter>
+            </defs>
+            <!-- Grid floor -->
+            <g opacity="0.15" stroke="#4F46E5" stroke-width="0.5">
+              <line x1="60" y1="320" x2="420" y2="320"/><line x1="100" y1="280" x2="380" y2="280"/><line x1="140" y1="240" x2="340" y2="240"/>
+              <line x1="120" y1="300" x2="160" y2="200"/><line x1="200" y1="340" x2="240" y2="240"/><line x1="280" y1="300" x2="320" y2="200"/>
+            </g>
+            <!-- Connection lines -->
+            <g stroke="#4F46E5" stroke-width="1.5" opacity="0.4">
+              <line x1="120" y1="120" x2="240" y2="200"/><line x1="360" y1="100" x2="240" y2="200"/><line x1="380" y1="280" x2="240" y2="200"/>
+              <line x1="100" y1="260" x2="240" y2="200"/><line x1="300" y1="320" x2="240" y2="200"/>
+            </g>
+            <!-- Text embedding node -->
+            <g transform="translate(80, 90)">
+              <path d="M0 20 L30 5 L60 20 L60 50 L30 65 L0 50 Z" fill="#EEF2FF" stroke="#4F46E5" stroke-width="1.5"/>
+              <text x="15" y="38" font-family="JetBrains Mono" font-size="10" fill="#4F46E5">&lt;/&gt;</text>
+              <circle cx="30" cy="35" r="6" fill="#4F46E5" class="glow-node" filter="url(#glow)"/>
+            </g>
+            <!-- Image embedding node -->
+            <g transform="translate(320, 60)">
+              <path d="M0 20 L30 5 L60 20 L60 50 L30 65 L0 50 Z" fill="#ECFDF5" stroke="#10B981" stroke-width="1.5"/>
+              <rect x="12" y="28" width="16" height="12" rx="2" fill="none" stroke="#10B981" stroke-width="1.2"/>
+              <circle cx="30" cy="35" r="6" fill="#10B981" class="glow-node" filter="url(#glow)"/>
+            </g>
+            <!-- Code embedding node -->
+            <g transform="translate(60, 220)">
+              <path d="M0 20 L30 5 L60 20 L60 50 L30 65 L0 50 Z" fill="#F1F5F9" stroke="#64748B" stroke-width="1.5"/>
+              <text x="10" y="38" font-family="JetBrains Mono" font-size="8" fill="#64748B">{...}</text>
+              <circle cx="30" cy="35" r="6" fill="#6366F1" class="glow-node" filter="url(#glow)"/>
+            </g>
+            <!-- Audio / extra node -->
+            <g transform="translate(300, 280)">
+              <path d="M0 20 L30 5 L60 20 L60 50 L30 65 L0 50 Z" fill="#EEF2FF" stroke="#4F46E5" stroke-width="1.5"/>
+              <circle cx="30" cy="35" r="6" fill="#4F46E5" opacity="0.7"/>
+            </g>
+            <!-- Central Hub -->
+            <g transform="translate(180, 150)">
+              <path d="M0 40 L60 10 L120 40 L120 100 L60 130 L0 100 Z" fill="url(#hubGrad)" stroke="#0F172A" stroke-width="2"/>
+              <text x="30" y="65" font-family="Plus Jakarta Sans" font-size="11" font-weight="700" fill="white">INDEX</text>
+              <text x="22" y="82" font-family="Plus Jakarta Sans" font-size="9" font-weight="600" fill="white" opacity="0.9">HUB</text>
+              <circle cx="60" cy="70" r="14" fill="white" opacity="0.2"/>
+              <circle cx="60" cy="70" r="8" fill="white" class="glow-node"/>
+            </g>
+            <text x="160" y="370" font-family="Plus Jakarta Sans" font-size="11" fill="#94A3B8" text-anchor="middle">Multi-Modal → Vectoris Index Hub</text>
+          </svg>
+        </div>
+      </div>
+    </section>
+
+    <!-- Feature Grid -->
+    <section class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-16 lg:py-24" id="architecture">
+      <div class="text-center mb-12 lg:mb-16">
+        <h2 class="text-3xl sm:text-4xl font-bold text-deep mb-4">Vectoris.dev Engine Architecture</h2>
+        <p class="text-slate-600 max-w-2xl mx-auto">Built for production-grade vector infrastructure at planetary scale.</p>
+      </div>
+      <div class="grid sm:grid-cols-2 lg:grid-cols-3 gap-6">
+        <article class="bg-white rounded-2xl border border-slate-100 shadow-card p-6 hover:shadow-lg transition-shadow">
+          <div class="w-10 h-10 rounded-lg bg-vector-soft flex items-center justify-center mb-4">
+            <svg class="w-5 h-5 text-vector" fill="currentColor" viewBox="0 0 20 20"><path fill-rule="evenodd" d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z" clip-rule="evenodd"/></svg>
+          </div>
+          <h3 class="text-lg font-bold text-deep mb-2">Sub-Millisecond ANN Retrieval</h3>
+          <p class="text-slate-600 text-sm leading-relaxed">HNSW and IVF-PQ indexes deliver p99 latency under 5ms across billion-vector corpora with tunable recall targets.</p>
+        </article>
+        <article class="bg-white rounded-2xl border border-slate-100 shadow-card p-6 hover:shadow-lg transition-shadow">
+          <div class="w-10 h-10 rounded-lg bg-vector-soft flex items-center justify-center mb-4">
+            <svg class="w-5 h-5 text-vector" fill="currentColor" viewBox="0 0 20 20"><path fill-rule="evenodd" d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z" clip-rule="evenodd"/></svg>
+          </div>
+          <h3 class="text-lg font-bold text-deep mb-2">Billion-Scale Memory Quantization</h3>
+          <p class="text-slate-600 text-sm leading-relaxed">Product quantization and scalar compression reduce RAM footprint by up to 90% without sacrificing retrieval quality.</p>
+        </article>
+        <article class="bg-white rounded-2xl border border-slate-100 shadow-card p-6 hover:shadow-lg transition-shadow">
+          <div class="w-10 h-10 rounded-lg bg-vector-soft flex items-center justify-center mb-4">
+            <svg class="w-5 h-5 text-vector" fill="currentColor" viewBox="0 0 20 20"><path fill-rule="evenodd" d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z" clip-rule="evenodd"/></svg>
+          </div>
+          <h3 class="text-lg font-bold text-deep mb-2">Dynamic Multi-Modal Embeddings</h3>
+          <p class="text-slate-600 text-sm leading-relaxed">Unified embedding pipeline for text, image, code, and audio vectors with cross-modal similarity in a single index.</p>
+        </article>
+        <article class="bg-white rounded-2xl border border-slate-100 shadow-card p-6 hover:shadow-lg transition-shadow">
+          <div class="w-10 h-10 rounded-lg bg-vector-soft flex items-center justify-center mb-4">
+            <svg class="w-5 h-5 text-vector" fill="currentColor" viewBox="0 0 20 20"><path fill-rule="evenodd" d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z" clip-rule="evenodd"/></svg>
+          </div>
+          <h3 class="text-lg font-bold text-deep mb-2">Hybrid Sparse-Dense Reranking</h3>
+          <p class="text-slate-600 text-sm leading-relaxed">Combine BM25 sparse retrieval with dense vector scores for state-of-the-art hybrid search and reranking pipelines.</p>
+        </article>
+        <article class="bg-white rounded-2xl border border-slate-100 shadow-card p-6 hover:shadow-lg transition-shadow">
+          <div class="w-10 h-10 rounded-lg bg-vector-soft flex items-center justify-center mb-4">
+            <svg class="w-5 h-5 text-vector" fill="currentColor" viewBox="0 0 20 20"><path fill-rule="evenodd" d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z" clip-rule="evenodd"/></svg>
+          </div>
+          <h3 class="text-lg font-bold text-deep mb-2">Zero-Downtime Index Mutation</h3>
+          <p class="text-slate-600 text-sm leading-relaxed">Hot-swap index segments, add vectors in real-time, and rebuild graphs without interrupting live query traffic.</p>
+        </article>
+        <article class="bg-white rounded-2xl border border-slate-100 shadow-card p-6 hover:shadow-lg transition-shadow">
+          <div class="w-10 h-10 rounded-lg bg-vector-soft flex items-center justify-center mb-4">
+            <svg class="w-5 h-5 text-vector" fill="currentColor" viewBox="0 0 20 20"><path fill-rule="evenodd" d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z" clip-rule="evenodd"/></svg>
+          </div>
+          <h3 class="text-lg font-bold text-deep mb-2">Enterprise Compliance & Vault</h3>
+          <p class="text-slate-600 text-sm leading-relaxed">SOC 2 Type II, ISO 27001, and GDPR-ready data vaults with field-level encryption and audit logging.</p>
+        </article>
+      </div>
+    </section>
+
+    <!-- Telemetry Engine -->
+    <section class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-16 lg:py-24" id="telemetry">
+      <div class="text-center mb-12">
+        <h2 class="text-3xl sm:text-4xl font-bold text-deep mb-4">Interactive Telemetry Engine</h2>
+        <p class="text-slate-600 max-w-2xl mx-auto">Tune index parameters and observe simulated live performance metrics.</p>
+      </div>
+      <div class="bg-white rounded-2xl border border-slate-100 shadow-card p-6 lg:p-8">
+        <div class="grid lg:grid-cols-2 gap-8">
+          <div class="space-y-6">
+            <div>
+              <label for="index-type" class="block text-sm font-semibold text-deep mb-2">Index Type</label>
+              <select id="index-type" class="w-full px-4 py-3 rounded-xl border border-slate-200 bg-[#FAFAFC] text-sm focus:outline-none focus:ring-2 focus:ring-vector/30 focus:border-vector">
+                <option value="hnsw">HNSW Graph</option>
+                <option value="ivf-pq">IVF-PQ</option>
+                <option value="exact">Exact Flat</option>
+              </select>
+            </div>
+            <div>
+              <label for="dimensions" class="block text-sm font-semibold text-deep mb-2">Vector Dimensions: <span id="dim-val" class="text-vector font-mono">768</span></label>
+              <input type="range" id="dimensions" min="128" max="4096" step="128" value="768" class="w-full accent-vector">
+            </div>
+            <div>
+              <label for="concurrency" class="block text-sm font-semibold text-deep mb-2">Query Concurrency: <span id="conc-val" class="text-vector font-mono">32</span></label>
+              <input type="range" id="concurrency" min="1" max="256" step="1" value="32" class="w-full accent-vector">
+            </div>
+            <div class="grid grid-cols-3 gap-4 pt-4">
+              <div class="bg-[#FAFAFC] rounded-xl p-4 border border-slate-100">
+                <p class="text-xs text-slate-500 uppercase tracking-wide mb-1">Search Recall</p>
+                <p id="metric-recall" class="text-2xl font-bold text-deep font-mono">96.2%</p>
+              </div>
+              <div class="bg-[#FAFAFC] rounded-xl p-4 border border-slate-100">
+                <p class="text-xs text-slate-500 uppercase tracking-wide mb-1">Query Latency</p>
+                <p id="metric-latency" class="text-2xl font-bold text-deep font-mono">2.4ms</p>
+              </div>
+              <div class="bg-[#FAFAFC] rounded-xl p-4 border border-slate-100">
+                <p class="text-xs text-slate-500 uppercase tracking-wide mb-1">RAM Savings</p>
+                <p id="metric-ram" class="text-2xl font-bold text-mint font-mono">68%</p>
+              </div>
+            </div>
+          </div>
+          <div>
+            <div class="flex items-center gap-2 mb-3">
+              <span class="w-2 h-2 rounded-full bg-mint animate-pulse"></span>
+              <span class="text-xs font-semibold text-slate-500 uppercase tracking-wide">Live Terminal</span>
+            </div>
+            <div id="terminal" class="bg-deep rounded-xl p-4 h-64 lg:h-80 overflow-y-auto font-mono text-xs text-slate-300 leading-relaxed" aria-live="polite"></div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- SDK Banner -->
+    <section class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-8">
+      <div class="bg-deep rounded-2xl p-6 lg:p-8 flex flex-col sm:flex-row items-center justify-between gap-4">
+        <div class="flex items-center gap-3 w-full sm:w-auto">
+          <span class="text-slate-400 text-sm font-mono shrink-0">$</span>
+          <code class="text-white font-mono text-sm sm:text-base flex-1">pip install vectoris-sdk</code>
+        </div>
+        <button data-copy="pip install vectoris-sdk" data-copy-msg="Install command copied!" class="shrink-0 px-6 py-2.5 rounded-full bg-vector text-white text-sm font-semibold hover:bg-indigo-600 transition-colors uppercase tracking-wide">Copy</button>
+      </div>
+    </section>
+
+    <!-- Contact CTA -->
+    <section class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-16 lg:py-24">
+      <div class="bg-white rounded-2xl border border-slate-100 shadow-card p-8 lg:p-12 text-center max-w-3xl mx-auto">
+        <h2 class="text-2xl sm:text-3xl font-bold text-deep mb-4">Schedule a Vector Infrastructure Review</h2>
+        <p class="text-slate-600 mb-8 leading-relaxed">Enterprise IT teams and AI architects: discover how Vectoris.dev can accelerate your embedding pipelines, reduce infra costs, and scale to billions of vectors.</p>
+        <form data-whitelist-form class="flex flex-col sm:flex-row gap-3 max-w-md mx-auto">
+          <input type="email" name="email" required placeholder="work@company.com" class="flex-1 px-4 py-3 rounded-full border border-slate-200 text-sm focus:outline-none focus:ring-2 focus:ring-vector/30 focus:border-vector" aria-label="Email address">
+          <button type="submit" class="px-6 py-3 rounded-full bg-deep text-white text-sm font-semibold hover:bg-slate-800 transition-colors uppercase tracking-wide shrink-0">Request Review</button>
+        </form>
+        <p class="text-xs text-slate-400 mt-4">Private beta — whitelist approval required for platform access.</p>
+      </div>
+    </section>
+  </main>
+
+  <!-- Footer -->
+  <footer class="border-t border-slate-100 bg-white">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-8">
+      <div class="flex flex-col sm:flex-row items-center justify-between gap-4">
+        <p class="text-sm text-slate-500">&copy; 2026 Vectoris.dev. All rights reserved.</p>
+        <div class="flex flex-wrap items-center gap-4 text-xs font-mono text-slate-400">
+          <span class="px-3 py-1 rounded-full bg-mint-soft text-mint font-semibold">SOC2_TYPE_II</span>
+          <span class="px-3 py-1 rounded-full bg-vector-soft text-vector font-semibold">ISO_27001</span>
+          <span class="px-3 py-1 rounded-full bg-slate-100 text-slate-600 font-semibold">GDPR_VERIFIED</span>
+        </div>
+      </div>
+      <div class="flex flex-wrap justify-center sm:justify-start gap-6 mt-6 text-sm text-slate-500">
+        <a href="engine.html" class="hover:text-vector transition-colors">Engine</a>
+        <a href="solutions.html" class="hover:text-vector transition-colors">Solutions</a>
+        <a href="benchmarks.html" class="hover:text-vector transition-colors">Benchmarks</a>
+        <a href="documentation.html" class="hover:text-vector transition-colors">Documentation</a>
+        <a href="pricing.html" class="hover:text-vector transition-colors">Pricing</a>
+        <a href="login.html" class="hover:text-vector transition-colors">Login</a>
+      </div>
+    </div>
+  </footer>
+
+  <script src="assets/js/shared.js"></script>
+  <script>
+    (function () {
+      var menuBtn = document.getElementById('mobile-menu-btn');
+      var mobileMenu = document.getElementById('mobile-menu');
+      if (menuBtn && mobileMenu) {
+        menuBtn.addEventListener('click', function () {
+          var open = !mobileMenu.classList.contains('hidden');
+          mobileMenu.classList.toggle('hidden');
+          menuBtn.setAttribute('aria-expanded', !open);
+        });
+      }
+
+      var indexProfiles = {
+        hnsw: { recall: 0.96, latency: 2.2, ram: 65 },
+        'ivf-pq': { recall: 0.91, latency: 4.8, ram: 82 },
+        exact: { recall: 1.0, latency: 48, ram: 5 }
+      };
+
+      var indexType = document.getElementById('index-type');
+      var dimensions = document.getElementById('dimensions');
+      var concurrency = document.getElementById('concurrency');
+      var dimVal = document.getElementById('dim-val');
+      var concVal = document.getElementById('conc-val');
+      var metricRecall = document.getElementById('metric-recall');
+      var metricLatency = document.getElementById('metric-latency');
+      var metricRam = document.getElementById('metric-ram');
+      var terminal = document.getElementById('terminal');
+
+      var logLines = [];
+      var maxLines = 40;
+
+      function addLog(line) {
+        var ts = new Date().toISOString().slice(11, 19);
+        logLines.push('[' + ts + '] ' + line);
+        if (logLines.length > maxLines) logLines.shift();
+        terminal.innerHTML = logLines.map(function (l) {
+          var cls = 'text-slate-400';
+          if (l.indexOf('OK') !== -1 || l.indexOf('indexed') !== -1) cls = 'text-mint';
+          if (l.indexOf('WARN') !== -1) cls = 'text-amber-400';
+          return '<div class="' + cls + '">' + l + '</div>';
+        }).join('');
+        terminal.scrollTop = terminal.scrollHeight;
+      }
+
+      function updateMetrics() {
+        var type = indexType.value;
+        var dim = parseInt(dimensions.value, 10);
+        var conc = parseInt(concurrency.value, 10);
+        var profile = indexProfiles[type];
+        dimVal.textContent = dim;
+        concVal.textContent = conc;
+
+        var dimFactor = dim / 768;
+        var concFactor = Math.log2(conc) / 5;
+        var jitter = (Math.random() - 0.5) * 0.04;
+
+        var recall = Math.min(100, (profile.recall - dimFactor * 0.02 + jitter) * 100);
+        var latency = profile.latency * dimFactor * (1 + concFactor * 0.3) + (Math.random() * 0.5);
+        var ram = Math.min(95, profile.ram + (dim > 1536 ? -5 : 0) + (Math.random() * 3));
+
+        if (type === 'exact') recall = 100;
+
+        metricRecall.textContent = recall.toFixed(1) + '%';
+        metricLatency.textContent = latency.toFixed(1) + 'ms';
+        metricRam.textContent = Math.round(ram) + '%';
+      }
+
+      function simulateLog() {
+        var type = indexType.value;
+        var dim = dimensions.value;
+        var msgs = [
+          'vectoris index build — shard_0 segment merged OK',
+          'HNSW graph layer ' + Math.floor(Math.random() * 4 + 2) + ' optimized — ef=' + Math.floor(Math.random() * 100 + 64),
+          'embedding batch ' + Math.floor(Math.random() * 9000 + 1000) + ' vectors indexed (' + dim + 'd)',
+          'query pool concurrency=' + concurrency.value + ' — p99 stable',
+          'IVF centroid reassignment complete — recall +' + (Math.random() * 0.5).toFixed(2) + '%',
+          'memory quantizer PQ-' + Math.floor(Math.random() * 16 + 8) + ' applied — RAM delta -' + Math.floor(Math.random() * 20 + 5) + '%',
+          'index type [' + type + '] hot-swap checkpoint saved',
+          'ANN probe k=' + Math.floor(Math.random() * 50 + 10) + ' — latency ' + (Math.random() * 3 + 1).toFixed(2) + 'ms'
+        ];
+        addLog(msgs[Math.floor(Math.random() * msgs.length)]);
+      }
+
+      indexType.addEventListener('change', function () {
+        addLog('index type switched → ' + indexType.value);
+        updateMetrics();
+      });
+      dimensions.addEventListener('input', updateMetrics);
+      concurrency.addEventListener('input', updateMetrics);
+
+      addLog('vectoris telemetry engine initialized');
+      addLog('connected to simulated cluster — us-east-1');
+      updateMetrics();
+      setInterval(function () { updateMetrics(); simulateLog(); }, 2200);
+    })();
+  </script>
+  <style>
+    @keyframes pulse-glow {
+      0%, 100% { opacity: 1; }
+      50% { opacity: 0.5; }
+    }
+  </style>
+</body>
+</html>
