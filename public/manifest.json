@@ -1,0 +1,21 @@
+{
+  "name": "SOMA Autos",
+  "short_name": "SOMA",
+  "description": "AI infrastructure for the next generation of vehicles.",
+  "start_url": "/",
+  "display": "standalone",
+  "background_color": "#FAFAFA",
+  "theme_color": "#0A0A0A",
+  "icons": [
+    {
+      "src": "/apple-touch-icon.png",
+      "sizes": "180x180",
+      "type": "image/png"
+    },
+    {
+      "src": "/favicon-32x32.png",
+      "sizes": "32x32",
+      "type": "image/png"
+    }
+  ]
+}
