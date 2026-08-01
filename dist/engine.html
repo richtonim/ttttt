@@ -1,0 +1,99 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Engine — Vectoris.dev Vector Search Infrastructure</title>
+  <meta name="description" content="Explore the Vectoris.dev engine: HNSW graphs, IVF-PQ quantization, hybrid reranking, and zero-downtime index mutations for billion-scale vector search.">
+  <link rel="canonical" href="https://vectoris.dev/engine.html">
+  <meta property="og:title" content="Vectoris.dev Engine">
+  <meta property="og:description" content="High-throughput ANN retrieval engine for developers and AI architects.">
+  <meta property="og:url" content="https://vectoris.dev/engine.html">
+  <link rel="icon" href="assets/img/favicon.ico" type="image/x-icon">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=JetBrains+Mono:wght@400;500;600&family=Plus+Jakarta+Sans:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+  <script src="https://cdn.tailwindcss.com"></script>
+  <script>tailwind.config={theme:{extend:{colors:{deep:'#0F172A',vector:'#4F46E5','vector-soft':'#EEF2FF',mint:'#10B981','mint-soft':'#ECFDF5'},fontFamily:{sans:['Plus Jakarta Sans','Inter','sans-serif'],mono:['JetBrains Mono','monospace']},boxShadow:{card:'0 10px 30px -5px rgba(15, 23, 42, 0.05)'}}}};</script>
+</head>
+<body class="bg-[#FAFAFC] text-deep font-sans antialiased overflow-x-hidden">
+  <header class="sticky top-0 z-50 bg-[#FAFAFC]/90 backdrop-blur-md border-b border-slate-100">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 flex items-center justify-between h-16 lg:h-20">
+      <a href="index.html"><img src="assets/img/logo.svg" alt="Vectoris.dev" class="h-8" width="160" height="32"></a>
+      <nav class="hidden md:flex items-center gap-8" aria-label="Main">
+        <a href="engine.html" class="text-xs font-semibold tracking-widest text-vector uppercase">Engine</a>
+        <a href="solutions.html" class="text-xs font-semibold tracking-widest text-slate-600 hover:text-vector uppercase">Solutions</a>
+        <a href="benchmarks.html" class="text-xs font-semibold tracking-widest text-slate-600 hover:text-vector uppercase">Benchmarks</a>
+        <a href="documentation.html" class="text-xs font-semibold tracking-widest text-slate-600 hover:text-vector uppercase">Documentation</a>
+      </nav>
+      <a href="demo.html" class="hidden sm:inline-flex px-5 py-2.5 rounded-full bg-deep text-white text-xs font-semibold tracking-wide uppercase hover:bg-slate-800">Live Demo</a>
+    </div>
+  </header>
+
+  <main class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-12 lg:py-20">
+    <span class="inline-flex px-4 py-1.5 rounded-full bg-vector-soft text-vector text-xs font-semibold uppercase tracking-wide mb-6">Core Engine</span>
+    <h1 class="text-4xl sm:text-5xl font-extrabold text-deep mb-6">The Vectoris Engine</h1>
+    <p class="text-lg text-slate-600 max-w-3xl mb-12 leading-relaxed">A purpose-built ANN retrieval core designed for sub-millisecond query latency at billion-vector scale. Every component — from graph construction to quantization codecs — is optimized for production AI workloads.</p>
+
+    <div class="grid lg:grid-cols-2 gap-8 mb-16">
+      <article class="bg-white rounded-2xl border border-slate-100 shadow-card p-8">
+        <h2 class="text-xl font-bold mb-4">HNSW Graph Index</h2>
+        <p class="text-slate-600 text-sm leading-relaxed mb-4">Hierarchical Navigable Small World graphs with configurable efConstruction and M parameters. Achieve 95%+ recall at p99 latency under 5ms on 100M+ vector corpora.</p>
+        <ul class="space-y-2 text-sm text-slate-600">
+          <li class="flex gap-2"><span class="text-vector">✓</span> Layer-wise greedy search with early termination</li>
+          <li class="flex gap-2"><span class="text-vector">✓</span> Dynamic edge pruning for memory efficiency</li>
+          <li class="flex gap-2"><span class="text-vector">✓</span> Parallel graph construction across shards</li>
+        </ul>
+      </article>
+      <article class="bg-white rounded-2xl border border-slate-100 shadow-card p-8">
+        <h2 class="text-xl font-bold mb-4">IVF-PQ Quantization</h2>
+        <p class="text-slate-600 text-sm leading-relaxed mb-4">Inverted file indexes with product quantization reduce memory footprint by up to 90%. Ideal for cold-tier storage and cost-optimized retrieval tiers.</p>
+        <ul class="space-y-2 text-sm text-slate-600">
+          <li class="flex gap-2"><span class="text-vector">✓</span> Adaptive centroid clustering (k-means++)</li>
+          <li class="flex gap-2"><span class="text-vector">✓</span> PQ-8 through PQ-64 codec selection</li>
+          <li class="flex gap-2"><span class="text-vector">✓</span> SIMD-accelerated distance computation</li>
+        </ul>
+      </article>
+      <article class="bg-white rounded-2xl border border-slate-100 shadow-card p-8">
+        <h2 class="text-xl font-bold mb-4">Hybrid Retrieval Pipeline</h2>
+        <p class="text-slate-600 text-sm leading-relaxed mb-4">Fuse sparse BM25 scores with dense cosine similarity in a single query path. Configurable fusion weights and cross-encoder reranking stages.</p>
+        <ul class="space-y-2 text-sm text-slate-600">
+          <li class="flex gap-2"><span class="text-vector">✓</span> Reciprocal rank fusion (RRF) scoring</li>
+          <li class="flex gap-2"><span class="text-vector">✓</span> Two-stage retrieve-then-rerank architecture</li>
+          <li class="flex gap-2"><span class="text-vector">✓</span> Filtered ANN with metadata predicates</li>
+        </ul>
+      </article>
+      <article class="bg-white rounded-2xl border border-slate-100 shadow-card p-8">
+        <h2 class="text-xl font-bold mb-4">Live Index Mutation</h2>
+        <p class="text-slate-600 text-sm leading-relaxed mb-4">Add, update, and delete vectors without downtime. Segment-based architecture enables hot-swapping index shards during live traffic.</p>
+        <ul class="space-y-2 text-sm text-slate-600">
+          <li class="flex gap-2"><span class="text-vector">✓</span> WAL-backed incremental updates</li>
+          <li class="flex gap-2"><span class="text-vector">✓</span> Background compaction and merge</li>
+          <li class="flex gap-2"><span class="text-vector">✓</span> Versioned snapshot checkpoints</li>
+        </ul>
+      </article>
+    </div>
+
+    <div class="bg-deep rounded-2xl p-8 text-center">
+      <h2 class="text-2xl font-bold text-white mb-4">Ready to benchmark the engine?</h2>
+      <p class="text-slate-400 mb-6">Run live simulations against your workload parameters.</p>
+      <div class="flex flex-wrap justify-center gap-4">
+        <a href="benchmarks.html" class="px-7 py-3 rounded-full bg-vector text-white text-sm font-semibold uppercase tracking-wide hover:bg-indigo-600">Test Benchmarks</a>
+        <a href="documentation.html" class="px-7 py-3 rounded-full border border-slate-600 text-white text-sm font-semibold uppercase tracking-wide hover:bg-slate-800">Read Docs</a>
+      </div>
+    </div>
+  </main>
+
+  <footer class="border-t border-slate-100 bg-white mt-12">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-8 flex flex-col sm:flex-row justify-between gap-4">
+      <p class="text-sm text-slate-500">&copy; 2026 Vectoris.dev</p>
+      <div class="flex gap-4 text-xs font-mono text-slate-400">
+        <span class="px-3 py-1 rounded-full bg-mint-soft text-mint">SOC2_TYPE_II</span>
+        <span class="px-3 py-1 rounded-full bg-vector-soft text-vector">ISO_27001</span>
+        <span class="px-3 py-1 rounded-full bg-slate-100 text-slate-600">GDPR_VERIFIED</span>
+      </div>
+    </div>
+  </footer>
+  <script src="assets/js/shared.js"></script>
+</body>
+</html>
