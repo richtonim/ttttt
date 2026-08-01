@@ -71,7 +71,7 @@ export function Developers() {
                           {line.includes("//") ? (
                             <>
                               <span>{line.split("//")[0]}</span>
-                              <span className="text-white/25">//{line.split("//")[1]}</span>
+                              <span className="text-white/25">{"//"}{line.split("//")[1]}</span>
                             </>
                           ) : line.includes("'") ? (
                             line.split(/('.*?')/).map((part, j) =>
