@@ -1,0 +1,9 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 120 120" fill="none">
+  <rect width="120" height="120" rx="8" fill="#0A0A0A"/>
+  <path d="M30 75 L35 55 L50 48 L70 48 L85 55 L90 75 L85 80 L70 83 L50 83 L35 80 Z" stroke="#FAFAFA" stroke-width="2" fill="none"/>
+  <circle cx="42" cy="78" r="6" stroke="#00D4FF" stroke-width="1.5" fill="none"/>
+  <circle cx="78" cy="78" r="6" stroke="#00D4FF" stroke-width="1.5" fill="none"/>
+  <path d="M50 48 L55 38 L65 38 L70 48" stroke="#FAFAFA" stroke-width="1.5" fill="none"/>
+  <circle cx="60" cy="42" r="2" fill="#00D4FF"/>
+  <text x="60" y="105" text-anchor="middle" font-family="system-ui, sans-serif" font-size="10" font-weight="700" fill="#FAFAFA" letter-spacing="3">SOMA</text>
+</svg>
