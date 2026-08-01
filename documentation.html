@@ -1,0 +1,112 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Documentation — NodeRefine</title>
+  <meta name="description" content="NodeRefine documentation: API reference, SDK guides, webhook setup, CLI commands, and integration tutorials for AI workflow diagnostics.">
+  <link rel="canonical" href="https://noderefine.help/documentation.html">
+  <meta property="og:title" content="Documentation — NodeRefine">
+  <meta property="og:url" content="https://noderefine.help/documentation.html">
+  <link rel="icon" href="/favicon.ico" sizes="32x32">
+  <link rel="icon" type="image/svg+xml" href="/favicon.svg">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=JetBrains+Mono:wght@400;500&display=swap" rel="stylesheet">
+</head>
+<body>
+  <a href="#main" class="skip-link">Skip to main content</a>
+  <nav class="nav" role="navigation" aria-label="Main navigation">
+    <div class="nav-inner">
+      <a href="index.html" class="nav-logo"><img src="/logo.svg" alt="" width="32" height="32">NodeRefine</a>
+      <div class="nav-links">
+        <a href="product.html">Product</a>
+        <a href="solutions.html">Solutions</a>
+        <a href="developers.html">Developers</a>
+        <a href="documentation.html">Docs</a>
+        <a href="pricing.html">Pricing</a>
+      </div>
+      <div class="nav-actions">
+        <a href="login.html" class="btn btn-ghost btn-sm">Log in</a>
+        <a href="register.html" class="btn btn-primary btn-sm">Get Started</a>
+      </div>
+      <button class="nav-toggle" aria-label="Toggle menu" aria-expanded="false"><span></span><span></span><span></span></button>
+    </div>
+  </nav>
+
+  <main id="main">
+    <section class="page-hero">
+      <div class="container">
+        <span class="section-label">Documentation</span>
+        <h1>NodeRefine Docs</h1>
+        <p>Guides, API reference, and tutorials to help you integrate and optimize AI workflows.</p>
+      </div>
+    </section>
+
+    <section>
+      <div class="container">
+        <div class="docs-layout">
+          <aside class="docs-sidebar" aria-label="Documentation navigation">
+            <a href="#getting-started" class="active">Getting Started</a>
+            <a href="#authentication">Authentication</a>
+            <a href="#workflows">Workflows API</a>
+            <a href="#nodes">Nodes API</a>
+            <a href="#webhooks">Webhooks</a>
+            <a href="#sdks">SDKs</a>
+            <a href="#cli">CLI Reference</a>
+          </aside>
+          <article class="docs-content">
+            <h2 id="getting-started">Getting Started</h2>
+            <p>NodeRefine provides a unified platform for diagnosing and optimizing AI workflows. This guide walks you through creating an account, generating an API key, and running your first workflow scan.</p>
+            <p>To begin, sign up for a NodeRefine account and navigate to Settings → API Keys to generate your first key. All API requests require authentication via the <code style="color:var(--accent-start)">Authorization: Bearer nr_live_...</code> header.</p>
+
+            <h2 id="authentication">Authentication</h2>
+            <p>NodeRefine uses API key authentication. Keys are prefixed with <code style="color:var(--accent-start)">nr_live_</code> for production and <code style="color:var(--accent-start)">nr_test_</code> for sandbox environments.</p>
+            <div class="code-block" style="margin:24px 0">
+              <div class="code-header"><div class="code-dots"><span></span><span></span><span></span></div><span class="code-lang">HTTP</span></div>
+              <div class="code-body"><pre>GET /v1/workflows HTTP/1.1
+Host: api.noderefine.help
+Authorization: Bearer nr_live_your_api_key
+Content-Type: application/json</pre></div>
+            </div>
+
+            <h2 id="workflows">Workflows API</h2>
+            <p>The Workflows API lets you register, scan, and analyze AI pipelines. Key endpoints:</p>
+            <ul style="margin:16px 0">
+              <li style="padding:6px 0;color:var(--text-secondary)"><code style="color:var(--accent-start)">POST /v1/workflows</code> — Register a new workflow</li>
+              <li style="padding:6px 0;color:var(--text-secondary)"><code style="color:var(--accent-start)">POST /v1/workflows/{id}/scan</code> — Run a full pipeline scan</li>
+              <li style="padding:6px 0;color:var(--text-secondary)"><code style="color:var(--accent-start)">GET /v1/workflows/{id}/health</code> — Get current health score</li>
+              <li style="padding:6px 0;color:var(--text-secondary)"><code style="color:var(--accent-start)">GET /v1/workflows/{id}/issues</code> — List detected issues</li>
+            </ul>
+
+            <h2 id="nodes">Nodes API</h2>
+            <p>Inspect individual nodes within a workflow for detailed diagnostics, execution history, and replay capabilities.</p>
+
+            <h2 id="webhooks">Webhooks</h2>
+            <p>Configure webhooks to receive real-time notifications when issues are detected, scans complete, or optimization recommendations are generated.</p>
+
+            <h2 id="sdks">SDKs</h2>
+            <p>Official SDKs are available for Python (<code style="color:var(--accent-start)">pip install noderefine</code>), Node.js (<code style="color:var(--accent-start)">npm install @noderefine/sdk</code>), and Go (<code style="color:var(--accent-start)">go get github.com/noderefine/sdk</code>).</p>
+
+            <h2 id="cli">CLI Reference</h2>
+            <p>Install the CLI globally with <code style="color:var(--accent-start)">npm install -g @noderefine/cli</code>. Run <code style="color:var(--accent-start)">nr --help</code> for the full command reference.</p>
+          </article>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <footer class="footer" role="contentinfo">
+    <div class="container">
+      <div class="footer-grid">
+        <div class="footer-brand"><a href="index.html" class="nav-logo"><img src="/logo.svg" alt="" width="32" height="32">NodeRefine</a></div>
+        <div class="footer-col"><h4>Developers</h4><a href="developers.html">Developer Hub</a><a href="documentation.html">Documentation</a></div>
+        <div class="footer-col"><h4>Support</h4><a href="help-center.html">Help Center</a></div>
+        <div class="footer-col"><h4>Company</h4><a href="about.html">About</a></div>
+      </div>
+      <div class="footer-bottom"><span>&copy; 2026 NodeRefine.</span></div>
+    </div>
+  </footer>
+  <script type="module" src="/src/scripts/main.js"></script>
+</body>
+</html>
