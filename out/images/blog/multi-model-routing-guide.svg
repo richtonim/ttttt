@@ -1,0 +1,17 @@
+<svg width="800" height="400" viewBox="0 0 800 400" fill="none" xmlns="http://www.w3.org/2000/svg">
+  <rect width="800" height="400" fill="#F6F7F9"/>
+  <circle cx="200" cy="200" r="60" fill="#EEEAFE" stroke="#7157FF" stroke-opacity="0.3"/>
+  <text x="200" y="205" text-anchor="middle" font-family="system-ui" font-size="13" fill="#7157FF">GPT</text>
+  <circle cx="400" cy="200" r="60" fill="#EEEAFE" stroke="#7157FF" stroke-opacity="0.3"/>
+  <text x="400" y="205" text-anchor="middle" font-family="system-ui" font-size="13" fill="#7157FF">Claude</text>
+  <circle cx="600" cy="200" r="60" fill="#EEEAFE" stroke="#7157FF" stroke-opacity="0.3"/>
+  <text x="600" y="205" text-anchor="middle" font-family="system-ui" font-size="13" fill="#7157FF">Gemini</text>
+  <rect x="340" y="60" width="120" height="48" rx="10" fill="#7157FF"/>
+  <text x="400" y="90" text-anchor="middle" font-family="system-ui" font-size="13" fill="white">Gateway</text>
+  <path d="M200 140 L360 90" stroke="#7157FF" stroke-width="1.5" stroke-opacity="0.4"/>
+  <path d="M400 140 L400 108" stroke="#7157FF" stroke-width="1.5"/>
+  <path d="M600 140 L440 90" stroke="#7157FF" stroke-width="1.5" stroke-opacity="0.4"/>
+  <rect x="300" y="300" width="200" height="48" rx="10" fill="white" stroke="#E7E9ED"/>
+  <text x="400" y="330" text-anchor="middle" font-family="system-ui" font-size="13" fill="#626873">Your Application</text>
+  <path d="M400 260 L400 300" stroke="#7157FF" stroke-width="2"/>
+</svg>
