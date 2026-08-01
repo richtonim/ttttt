@@ -2,28 +2,18 @@
 
 import { useState, useEffect } from "react";
 import Link from "next/link";
-import { Menu, X } from "lucide-react";
+import { Menu } from "lucide-react";
 import { Logo } from "@/components/logo/logo";
 import { Button } from "@/components/ui/button";
 import { Container } from "@/components/ui/container";
 import { NavDropdown } from "@/components/navigation/nav-dropdown";
 import { MobileMenu } from "@/components/navigation/mobile-menu";
-import { LocaleSwitcher } from "@/components/layout/locale-switcher";
 import { mainNavItems } from "@/content/navigation";
 import { cn } from "@/lib/utils";
-import type { Locale } from "@/lib/i18n/locales";
-import { getLocalizedPath } from "@/lib/i18n/locales";
-import type { Dictionary } from "@/lib/i18n";
 
-interface HeaderProps {
-  locale?: Locale;
-  dict?: Dictionary;
-}
-
-export function Header({ locale = "en", dict }: HeaderProps) {
+export function Header() {
   const [scrolled, setScrolled] = useState(false);
   const [mobileOpen, setMobileOpen] = useState(false);
-  const t = dict?.common;
 
   useEffect(() => {
     const onScroll = () => setScrolled(window.scrollY > 10);
@@ -42,23 +32,18 @@ export function Header({ locale = "en", dict }: HeaderProps) {
         )}
       >
         <Container>
-          <div className="flex h-16 items-center justify-between">
-            <div className="flex items-center gap-8">
-              <Logo locale={locale} />
+          <div className="flex h-16 items-center justify-between gap-4">
+            <div className="flex min-w-0 items-center gap-8">
+              <Logo />
               <nav className="hidden items-center gap-1 lg:flex" aria-label="Main navigation">
                 {mainNavItems.map((item) =>
                   item.items ? (
-                    <NavDropdown
-                      key={item.label}
-                      label={item.label}
-                      items={item.items}
-                      locale={locale}
-                    />
+                    <NavDropdown key={item.label} label={item.label} items={item.items} />
                   ) : (
                     <Link
                       key={item.label}
-                      href={getLocalizedPath(item.href!, locale)}
-                      className="rounded-button px-3 py-2 text-sm text-muted-foreground transition-colors hover:text-foreground"
+                      href={item.href!}
+                      className="whitespace-nowrap rounded-button px-3 py-2 text-sm text-muted-foreground transition-colors hover:text-foreground"
                     >
                       {item.label}
                     </Link>
@@ -66,16 +51,15 @@ export function Header({ locale = "en", dict }: HeaderProps) {
                 )}
               </nav>
             </div>
-            <div className="flex items-center gap-2">
-              <LocaleSwitcher locale={locale} className="hidden sm:flex" />
+            <div className="flex shrink-0 items-center gap-2">
               <Link
-                href={getLocalizedPath("/sign-in", locale)}
-                className="hidden rounded-button px-3 py-2 text-sm text-muted-foreground transition-colors hover:text-foreground sm:inline-flex"
+                href="/sign-in"
+                className="hidden whitespace-nowrap rounded-button px-3 py-2 text-sm text-muted-foreground transition-colors hover:text-foreground sm:inline-flex"
               >
-                {t?.signIn ?? "Sign in"}
+                Sign in
               </Link>
-              <Button href={getLocalizedPath("/early-access", locale)} size="sm" className="hidden sm:inline-flex">
-                {t?.startBuilding ?? "Start building"}
+              <Button href="/early-access" size="sm" className="hidden whitespace-nowrap sm:inline-flex">
+                Start building
               </Button>
               <button
                 type="button"
@@ -89,12 +73,7 @@ export function Header({ locale = "en", dict }: HeaderProps) {
           </div>
         </Container>
       </header>
-      <MobileMenu
-        open={mobileOpen}
-        onClose={() => setMobileOpen(false)}
-        locale={locale}
-        dict={dict}
-      />
+      <MobileMenu open={mobileOpen} onClose={() => setMobileOpen(false)} />
     </>
   );
 }

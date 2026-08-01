@@ -10,7 +10,7 @@ export const metadata = buildMetadata({
 
 export default function Page() {
   return (
-    <SiteLayout locale="en">
+    <SiteLayout>
       <LegalPage title="Terms of Service">
         <p>
           These Terms of Service govern your use of the NextLayer website and platform. This is placeholder legal content and should be reviewed by legal counsel before production launch.

@@ -10,8 +10,8 @@ export const metadata = buildMetadata({
 
 export default function Page() {
   return (
-    <SiteLayout locale="en">
-      <SolutionDetailPage slug="developer-platform" locale="en" />
+    <SiteLayout>
+      <SolutionDetailPage slug="developer-platform" />
     </SiteLayout>
   );
 }

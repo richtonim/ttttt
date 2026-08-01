@@ -1,5 +1,4 @@
 import type { Metadata } from "next";
-import type { Locale } from "./i18n/locales";
 
 const SITE_URL = "https://nextlayer.lat";
 
@@ -7,7 +6,6 @@ export interface PageMeta {
   title: string;
   description: string;
   path: string;
-  locale?: Locale;
   noIndex?: boolean;
 }
 
@@ -15,11 +13,9 @@ export function buildMetadata({
   title,
   description,
   path,
-  locale = "en",
   noIndex = false,
 }: PageMeta): Metadata {
-  const localePrefix = locale === "en" ? "" : `/${locale}`;
-  const canonical = `${SITE_URL}${localePrefix}${path === "/" ? "" : path}`;
+  const canonical = `${SITE_URL}${path === "/" ? "" : path}`;
   const fullTitle = path === "/" ? title : `${title} | NextLayer`;
 
   return {
@@ -27,19 +23,13 @@ export function buildMetadata({
     description,
     alternates: {
       canonical,
-      languages: {
-        en: `${SITE_URL}${path === "/" ? "" : path}`,
-        zh: `${SITE_URL}/zh${path === "/" ? "" : path}`,
-        es: `${SITE_URL}/es${path === "/" ? "" : path}`,
-        pt: `${SITE_URL}/pt${path === "/" ? "" : path}`,
-      },
     },
     openGraph: {
       title: fullTitle,
       description,
       url: canonical,
       siteName: "NextLayer",
-      locale: locale === "en" ? "en_US" : locale,
+      locale: "en_US",
       type: "website",
     },
     twitter: {

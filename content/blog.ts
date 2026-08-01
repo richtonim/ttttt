@@ -8,6 +8,7 @@ export const blogPosts = [
     date: "2026-01-15",
     readTime: "8 min",
     author: "NextLayer Team",
+    image: "/images/blog/build-reliable-ai-agents-production.svg",
     isExample: true,
   },
   {
@@ -19,6 +20,7 @@ export const blogPosts = [
     date: "2026-01-10",
     readTime: "6 min",
     author: "NextLayer Team",
+    image: "/images/blog/rag-vs-fine-tuning.svg",
     isExample: true,
   },
   {
@@ -30,6 +32,7 @@ export const blogPosts = [
     date: "2026-01-05",
     readTime: "7 min",
     author: "NextLayer Team",
+    image: "/images/blog/reduce-llm-api-costs.svg",
     isExample: true,
   },
   {
@@ -41,6 +44,7 @@ export const blogPosts = [
     date: "2025-12-28",
     readTime: "9 min",
     author: "NextLayer Team",
+    image: "/images/blog/secure-enterprise-ai-workflows.svg",
     isExample: true,
   },
   {
@@ -52,6 +56,7 @@ export const blogPosts = [
     date: "2025-12-20",
     readTime: "10 min",
     author: "NextLayer Team",
+    image: "/images/blog/multi-model-routing-guide.svg",
     isExample: true,
   },
   {
@@ -63,6 +68,7 @@ export const blogPosts = [
     date: "2025-12-12",
     readTime: "8 min",
     author: "NextLayer Team",
+    image: "/images/blog/evaluate-ai-agent-performance.svg",
     isExample: true,
   },
 ];

@@ -4,8 +4,6 @@ import { useState, useRef, useEffect } from "react";
 import Link from "next/link";
 import { ChevronDown, type LucideIcon } from "lucide-react";
 import { cn } from "@/lib/utils";
-import type { Locale } from "@/lib/i18n/locales";
-import { getLocalizedPath } from "@/lib/i18n/locales";
 
 interface NavItem {
   title: string;
@@ -17,10 +15,9 @@ interface NavItem {
 interface NavDropdownProps {
   label: string;
   items: NavItem[];
-  locale?: Locale;
 }
 
-export function NavDropdown({ label, items, locale = "en" }: NavDropdownProps) {
+export function NavDropdown({ label, items }: NavDropdownProps) {
   const [open, setOpen] = useState(false);
   const ref = useRef<HTMLDivElement>(null);
 
@@ -57,7 +54,7 @@ export function NavDropdown({ label, items, locale = "en" }: NavDropdownProps) {
             return (
               <Link
                 key={item.href}
-                href={getLocalizedPath(item.href, locale)}
+                href={item.href}
                 className="flex items-start gap-3 rounded-button p-3 transition-colors hover:bg-surface-soft"
                 onClick={() => setOpen(false)}
               >

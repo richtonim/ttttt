@@ -10,7 +10,7 @@ export const metadata = buildMetadata({
 
 export default function Page() {
   return (
-    <SiteLayout locale="en">
+    <SiteLayout>
       <LegalPage title="Cookie Policy">
         <p>
           This Cookie Policy explains how NextLayer uses cookies and similar technologies on our website. This is placeholder content and should be updated before production launch.

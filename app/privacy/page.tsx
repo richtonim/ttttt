@@ -10,7 +10,7 @@ export const metadata = buildMetadata({
 
 export default function Page() {
   return (
-    <SiteLayout locale="en">
+    <SiteLayout>
       <LegalPage title="Privacy Policy">
         <p>
           This Privacy Policy describes how NextLayer (&quot;we&quot;, &quot;us&quot;, or &quot;our&quot;) collects, uses, and protects information when you use our website and platform. This is placeholder legal content and should be reviewed by legal counsel before production launch.

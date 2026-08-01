@@ -10,8 +10,8 @@ export const metadata = buildMetadata({
 
 export default function Page() {
   return (
-    <SiteLayout locale="en">
-      <ProductDetailPage slug="knowledge-layer" locale="en" />
+    <SiteLayout>
+      <ProductDetailPage slug="knowledge-layer" />
     </SiteLayout>
   );
 }

@@ -2,10 +2,6 @@ import Link from "next/link";
 import { Linkedin, Github } from "lucide-react";
 import { Container } from "@/components/ui/container";
 import { Logo } from "@/components/logo/logo";
-import { LocaleSwitcher } from "@/components/layout/locale-switcher";
-import type { Locale } from "@/lib/i18n/locales";
-import { getLocalizedPath } from "@/lib/i18n/locales";
-import type { Dictionary } from "@/lib/i18n";
 
 const footerLinks = {
   Product: [
@@ -47,11 +43,6 @@ const footerLinks = {
   ],
 };
 
-interface FooterProps {
-  locale?: Locale;
-  dict?: Dictionary;
-}
-
 function XIcon({ className }: { className?: string }) {
   return (
     <svg className={className} viewBox="0 0 24 24" fill="currentColor" aria-hidden="true">
@@ -60,20 +51,18 @@ function XIcon({ className }: { className?: string }) {
   );
 }
 
-export function Footer({ locale = "en", dict }: FooterProps) {
+export function Footer() {
   const year = new Date().getFullYear();
-  const tagline = dict?.footer?.tagline ?? "NextLayer — The intelligent layer for modern business.";
 
   return (
     <footer className="border-t border-border bg-surface-soft">
       <Container className="py-16">
-        <div className="grid gap-10 md:grid-cols-2 lg:grid-cols-6">
+        <div className="grid gap-10 md:grid-cols-2 lg:grid-cols-7">
           <div className="lg:col-span-2">
-            <Logo locale={locale} />
-            <p className="mt-4 max-w-xs text-sm text-muted-foreground">{tagline}</p>
-            <div className="mt-6">
-              <LocaleSwitcher locale={locale} />
-            </div>
+            <Logo />
+            <p className="mt-4 max-w-xs text-sm text-muted-foreground">
+              NextLayer — The intelligent layer for modern business.
+            </p>
           </div>
           {Object.entries(footerLinks).map(([group, links]) => (
             <div key={group}>
@@ -82,7 +71,7 @@ export function Footer({ locale = "en", dict }: FooterProps) {
                 {links.map((link) => (
                   <li key={link.label}>
                     <Link
-                      href={getLocalizedPath(link.href, locale)}
+                      href={link.href}
                       className="text-sm text-muted-foreground transition-colors hover:text-foreground"
                     >
                       {link.label}
@@ -94,29 +83,15 @@ export function Footer({ locale = "en", dict }: FooterProps) {
           ))}
         </div>
         <div className="mt-12 flex flex-col items-center justify-between gap-4 border-t border-border pt-8 sm:flex-row">
-          <p className="text-sm text-muted-foreground">
-            © {year} NextLayer
-          </p>
+          <p className="text-sm text-muted-foreground">© {year} NextLayer</p>
           <div className="flex items-center gap-4">
-            <a
-              href="#"
-              className="text-muted-foreground transition-colors hover:text-foreground"
-              aria-label="LinkedIn"
-            >
+            <a href="#" className="text-muted-foreground transition-colors hover:text-foreground" aria-label="LinkedIn">
               <Linkedin className="h-5 w-5" />
             </a>
-            <a
-              href="#"
-              className="text-muted-foreground transition-colors hover:text-foreground"
-              aria-label="X (Twitter)"
-            >
+            <a href="#" className="text-muted-foreground transition-colors hover:text-foreground" aria-label="X (Twitter)">
               <XIcon className="h-5 w-5" />
             </a>
-            <a
-              href="#"
-              className="text-muted-foreground transition-colors hover:text-foreground"
-              aria-label="GitHub"
-            >
+            <a href="#" className="text-muted-foreground transition-colors hover:text-foreground" aria-label="GitHub">
               <Github className="h-5 w-5" />
             </a>
           </div>

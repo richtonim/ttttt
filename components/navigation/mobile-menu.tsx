@@ -6,20 +6,13 @@ import { X } from "lucide-react";
 import { Logo } from "@/components/logo/logo";
 import { Button } from "@/components/ui/button";
 import { mainNavItems } from "@/content/navigation";
-import type { Locale } from "@/lib/i18n/locales";
-import { getLocalizedPath } from "@/lib/i18n/locales";
-import type { Dictionary } from "@/lib/i18n";
 
 interface MobileMenuProps {
   open: boolean;
   onClose: () => void;
-  locale?: Locale;
-  dict?: Dictionary;
 }
 
-export function MobileMenu({ open, onClose, locale = "en", dict }: MobileMenuProps) {
-  const t = dict?.common;
-
+export function MobileMenu({ open, onClose }: MobileMenuProps) {
   useEffect(() => {
     if (open) {
       document.body.style.overflow = "hidden";
@@ -38,7 +31,7 @@ export function MobileMenu({ open, onClose, locale = "en", dict }: MobileMenuPro
       <div className="absolute inset-0 bg-black/20 backdrop-blur-sm" onClick={onClose} aria-hidden="true" />
       <div className="absolute inset-y-0 right-0 w-full max-w-sm bg-white shadow-card">
         <div className="flex h-16 items-center justify-between border-b border-border px-4">
-          <Logo locale={locale} />
+          <Logo />
           <button type="button" onClick={onClose} className="rounded-button p-2" aria-label="Close menu">
             <X className="h-5 w-5" />
           </button>
@@ -48,7 +41,7 @@ export function MobileMenu({ open, onClose, locale = "en", dict }: MobileMenuPro
             <div key={item.label} className="mb-6">
               {item.href ? (
                 <Link
-                  href={getLocalizedPath(item.href, locale)}
+                  href={item.href}
                   className="block py-2 text-base font-medium"
                   onClick={onClose}
                 >
@@ -62,7 +55,7 @@ export function MobileMenu({ open, onClose, locale = "en", dict }: MobileMenuPro
                   {item.items?.map((sub) => (
                     <Link
                       key={sub.href}
-                      href={getLocalizedPath(sub.href, locale)}
+                      href={sub.href}
                       className="block py-2 pl-2 text-sm text-muted-foreground"
                       onClick={onClose}
                     >
@@ -74,12 +67,12 @@ export function MobileMenu({ open, onClose, locale = "en", dict }: MobileMenuPro
             </div>
           ))}
         </nav>
-        <div className="absolute bottom-0 left-0 right-0 border-t border-border p-4 space-y-2">
-          <Button href={getLocalizedPath("/sign-in", locale)} variant="secondary" className="w-full">
-            {t?.signIn ?? "Sign in"}
+        <div className="absolute bottom-0 left-0 right-0 space-y-2 border-t border-border p-4">
+          <Button href="/sign-in" variant="secondary" className="w-full">
+            Sign in
           </Button>
-          <Button href={getLocalizedPath("/early-access", locale)} className="w-full">
-            {t?.startBuilding ?? "Start building"}
+          <Button href="/early-access" className="w-full">
+            Start building
           </Button>
         </div>
       </div>

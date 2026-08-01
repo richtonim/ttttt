@@ -1,12 +1,11 @@
-import Link from "next/link";
+import Image from "next/image";
 import { Container } from "@/components/ui/container";
 import { Section } from "@/components/ui/section";
 import { Card } from "@/components/ui/card";
 import { Badge } from "@/components/ui/badge";
 import { blogPosts } from "@/content/blog";
-import type { Locale } from "@/lib/i18n/locales";
 
-export function BlogPage({ locale = "en" as Locale }) {
+export function BlogPage() {
   return (
     <>
       <Section className="pt-32 pb-16">
@@ -21,18 +20,30 @@ export function BlogPage({ locale = "en" as Locale }) {
         <Container>
           <div className="grid gap-6 md:grid-cols-2 lg:grid-cols-3">
             {blogPosts.map((post) => (
-              <Card key={post.slug}>
-                <div className="mb-4 h-32 rounded-button bg-gradient-to-br from-brand-light to-surface-soft" />
-                <Badge variant="brand" className="mb-2">{post.category}</Badge>
-                {post.isExample && <Badge variant="muted" className="mb-2 ml-1">Example</Badge>}
-                <h2 className="font-medium">{post.title}</h2>
-                <p className="mt-2 text-sm text-muted-foreground">{post.excerpt}</p>
-                <div className="mt-4 flex items-center gap-3 text-xs text-muted">
-                  <span>{post.date}</span>
-                  <span>·</span>
-                  <span>{post.readTime}</span>
-                  <span>·</span>
-                  <span>{post.author}</span>
+              <Card key={post.slug} className="overflow-hidden p-0">
+                <div className="relative aspect-[2/1] w-full overflow-hidden border-b border-border">
+                  <Image
+                    src={post.image}
+                    alt=""
+                    fill
+                    className="object-cover"
+                    sizes="(max-width: 768px) 100vw, (max-width: 1200px) 50vw, 33vw"
+                  />
+                </div>
+                <div className="p-6">
+                  <div className="mb-2 flex flex-wrap gap-2">
+                    <Badge variant="brand">{post.category}</Badge>
+                    {post.isExample && <Badge variant="muted">Example</Badge>}
+                  </div>
+                  <h2 className="font-medium">{post.title}</h2>
+                  <p className="mt-2 text-sm text-muted-foreground">{post.excerpt}</p>
+                  <div className="mt-4 flex items-center gap-3 text-xs text-muted">
+                    <span>{post.date}</span>
+                    <span>·</span>
+                    <span>{post.readTime}</span>
+                    <span>·</span>
+                    <span>{post.author}</span>
+                  </div>
                 </div>
               </Card>
             ))}
