@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Sign Up — NodeRefine</title>
+  <meta name="description" content="Create a NodeRefine account to start diagnosing and optimizing your AI workflows. Join the waitlist for early access.">
+  <meta name="robots" content="noindex, nofollow">
+  <link rel="canonical" href="https://noderefine.help/register.html">
+  <link rel="icon" href="/favicon.ico" sizes="32x32">
+  <link rel="icon" type="image/svg+xml" href="/favicon.svg">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=JetBrains+Mono:wght@400;500&display=swap" rel="stylesheet">
+</head>
+<body>
+  <a href="#main" class="skip-link">Skip to main content</a>
+  <nav class="nav" role="navigation" aria-label="Main navigation">
+    <div class="nav-inner">
+      <a href="index.html" class="nav-logo"><img src="/logo.svg" alt="" width="32" height="32">NodeRefine</a>
+      <div class="nav-links">
+        <a href="product.html">Product</a>
+        <a href="solutions.html">Solutions</a>
+        <a href="developers.html">Developers</a>
+        <a href="documentation.html">Docs</a>
+        <a href="pricing.html">Pricing</a>
+      </div>
+      <div class="nav-actions">
+        <a href="login.html" class="btn btn-ghost btn-sm">Log in</a>
+      </div>
+      <button class="nav-toggle" aria-label="Toggle menu" aria-expanded="false"><span></span><span></span><span></span></button>
+    </div>
+  </nav>
+
+  <main id="main">
+    <section style="padding:calc(var(--nav-height) + 80px) 0 120px">
+      <div class="container">
+        <div class="auth-card">
+          <div style="text-align:center;margin-bottom:32px">
+            <h1>Get Started</h1>
+            <p style="margin-top:8px">Create your NodeRefine account</p>
+          </div>
+          <div class="glass-card">
+            <form id="register-form" aria-label="Registration form">
+              <div class="form-group">
+                <label for="name">Full Name</label>
+                <input type="text" id="name" name="name" class="form-input" placeholder="Jane Developer" required autocomplete="name">
+              </div>
+              <div class="form-group">
+                <label for="email">Work Email</label>
+                <input type="email" id="email" name="email" class="form-input" placeholder="you@company.com" required autocomplete="email">
+              </div>
+              <div class="form-group">
+                <label for="company">Company</label>
+                <input type="text" id="company" name="company" class="form-input" placeholder="Your company" autocomplete="organization">
+              </div>
+              <div class="form-group">
+                <label for="password">Password</label>
+                <input type="password" id="password" name="password" class="form-input" placeholder="Min. 8 characters" required minlength="8" autocomplete="new-password">
+              </div>
+              <button type="submit" class="btn btn-primary" style="width:100%">Create Account</button>
+            </form>
+            <div class="auth-divider">or</div>
+            <p style="text-align:center;font-size:0.875rem;color:var(--text-secondary)">
+              Already have an account? <a href="login.html" style="color:var(--accent-start)">Log in</a>
+            </p>
+            <p style="text-align:center;font-size:0.75rem;color:var(--text-muted);margin-top:16px">
+              Registration requires an approved waitlist email. Contact <a href="mailto:support@noderefine.help" style="color:var(--accent-start)">support@noderefine.help</a> to request access.
+            </p>
+          </div>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <footer class="footer" role="contentinfo">
+    <div class="container">
+      <div class="footer-bottom" style="border:none;padding:0">
+        <span>&copy; 2026 NodeRefine.</span>
+        <a href="help-center.html" style="color:var(--text-muted)">Help Center</a>
+      </div>
+    </div>
+  </footer>
+  <script type="module" src="/src/scripts/main.js"></script>
+</body>
+</html>

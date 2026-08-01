@@ -1,0 +1,16 @@
+{
+  "name": "noderefine-website",
+  "version": "1.0.0",
+  "private": true,
+  "type": "module",
+  "scripts": {
+    "dev": "vite",
+    "build": "node scripts/generate-favicon.js && vite build",
+    "preview": "vite preview"
+  },
+  "devDependencies": {
+    "sharp": "^0.33.5",
+    "to-ico": "^1.1.5",
+    "vite": "^6.2.0"
+  }
+}
