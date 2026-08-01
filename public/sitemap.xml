@@ -1,0 +1,32 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
+  <url><loc>https://entropy.autos</loc><priority>1.0</priority></url>
+  <url><loc>https://entropy.autos/platform/</loc><priority>0.8</priority></url>
+  <url><loc>https://entropy.autos/platform/vehicle-data/</loc><priority>0.6</priority></url>
+  <url><loc>https://entropy.autos/platform/fleet-intelligence/</loc><priority>0.6</priority></url>
+  <url><loc>https://entropy.autos/platform/analytics/</loc><priority>0.6</priority></url>
+  <url><loc>https://entropy.autos/solutions/</loc><priority>0.8</priority></url>
+  <url><loc>https://entropy.autos/solutions/manufacturers/</loc><priority>0.6</priority></url>
+  <url><loc>https://entropy.autos/solutions/autonomous-vehicles/</loc><priority>0.6</priority></url>
+  <url><loc>https://entropy.autos/solutions/electric-fleets/</loc><priority>0.6</priority></url>
+  <url><loc>https://entropy.autos/solutions/logistics/</loc><priority>0.6</priority></url>
+  <url><loc>https://entropy.autos/solutions/smart-mobility/</loc><priority>0.6</priority></url>
+  <url><loc>https://entropy.autos/technology/</loc><priority>0.8</priority></url>
+  <url><loc>https://entropy.autos/technology/ai-engine/</loc><priority>0.6</priority></url>
+  <url><loc>https://entropy.autos/technology/edge-computing/</loc><priority>0.6</priority></url>
+  <url><loc>https://entropy.autos/technology/security/</loc><priority>0.6</priority></url>
+  <url><loc>https://entropy.autos/developers/</loc><priority>0.8</priority></url>
+  <url><loc>https://entropy.autos/developers/api-reference/</loc><priority>0.6</priority></url>
+  <url><loc>https://entropy.autos/developers/sdks/</loc><priority>0.6</priority></url>
+  <url><loc>https://entropy.autos/developers/webhooks/</loc><priority>0.6</priority></url>
+  <url><loc>https://entropy.autos/developers/docs/</loc><priority>0.6</priority></url>
+  <url><loc>https://entropy.autos/company/</loc><priority>0.7</priority></url>
+  <url><loc>https://entropy.autos/company/careers/</loc><priority>0.6</priority></url>
+  <url><loc>https://entropy.autos/company/press/</loc><priority>0.6</priority></url>
+  <url><loc>https://entropy.autos/contact/</loc><priority>0.7</priority></url>
+  <url><loc>https://entropy.autos/login/</loc><priority>0.5</priority></url>
+  <url><loc>https://entropy.autos/register/</loc><priority>0.5</priority></url>
+  <url><loc>https://entropy.autos/pricing/</loc><priority>0.7</priority></url>
+  <url><loc>https://entropy.autos/privacy/</loc><priority>0.3</priority></url>
+  <url><loc>https://entropy.autos/terms/</loc><priority>0.3</priority></url>
+</urlset>
