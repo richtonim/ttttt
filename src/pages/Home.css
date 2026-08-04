@@ -1,0 +1,238 @@
+.hero {
+  padding: 100px 0 80px;
+  background: linear-gradient(180deg, var(--color-bg) 0%, var(--color-white) 100%);
+}
+
+.hero-inner {
+  max-width: 800px;
+}
+
+.hero-badge {
+  margin-bottom: 24px;
+}
+
+.hero-title {
+  font-size: 3.5rem;
+  font-weight: 800;
+  line-height: 1.1;
+  letter-spacing: -0.03em;
+  margin-bottom: 24px;
+}
+
+.hero-subtitle {
+  font-size: 1.25rem;
+  color: var(--color-text-muted);
+  line-height: 1.7;
+  margin-bottom: 36px;
+}
+
+.hero-actions {
+  display: flex;
+  gap: 16px;
+  margin-bottom: 56px;
+  flex-wrap: wrap;
+}
+
+.hero-stats {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 24px;
+  padding-top: 40px;
+  border-top: 1px solid var(--color-border);
+}
+
+.hero-stat-value {
+  display: block;
+  font-size: 1.75rem;
+  font-weight: 600;
+  color: var(--color-text);
+  margin-bottom: 4px;
+}
+
+.hero-stat-label {
+  font-size: 0.8125rem;
+  color: var(--color-text-muted);
+}
+
+.section-header {
+  margin-bottom: 40px;
+}
+
+.digest-grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 24px;
+}
+
+.digest-card h3 {
+  font-size: 1.0625rem;
+  font-weight: 700;
+  margin: 12px 0 8px;
+  line-height: 1.4;
+}
+
+.digest-card p {
+  font-size: 0.875rem;
+  color: var(--color-text-muted);
+  margin-bottom: 16px;
+}
+
+.digest-card-meta {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.digest-latency {
+  font-size: 0.75rem;
+  color: var(--color-live);
+}
+
+.digest-tags {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 6px;
+}
+
+.tag {
+  font-size: 0.6875rem;
+  padding: 3px 8px;
+  background: var(--color-bg);
+  border-radius: 4px;
+  color: var(--color-text-muted);
+}
+
+.section-cta {
+  text-align: center;
+  margin-top: 40px;
+}
+
+.telemetry-preview {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 24px;
+}
+
+.telemetry-card-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-start;
+  margin-bottom: 20px;
+}
+
+.telemetry-card h3 {
+  font-size: 1.125rem;
+  font-weight: 700;
+}
+
+.telemetry-provider {
+  font-size: 0.8125rem;
+  color: var(--color-text-muted);
+}
+
+.status-badge {
+  font-size: 0.6875rem;
+  font-weight: 600;
+  text-transform: uppercase;
+  padding: 4px 10px;
+  border-radius: 100px;
+}
+
+.status-released { background: var(--color-live-bg); color: var(--color-live); }
+.status-preview { background: #fff7ed; color: var(--color-flash-orange); }
+.status-rumored { background: var(--color-bg); color: var(--color-text-muted); }
+
+.telemetry-metrics {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 12px;
+  font-size: 0.8125rem;
+}
+
+.telemetry-metrics span {
+  display: block;
+  color: var(--color-text-muted);
+  margin-bottom: 2px;
+}
+
+.telemetry-metrics strong {
+  color: var(--color-text);
+}
+
+.features-grid {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 32px;
+}
+
+.feature-card {
+  text-align: center;
+}
+
+.feature-icon {
+  font-size: 2rem;
+  margin-bottom: 16px;
+}
+
+.feature-card h3 {
+  font-size: 1.0625rem;
+  font-weight: 700;
+  margin-bottom: 8px;
+}
+
+.feature-card p {
+  font-size: 0.875rem;
+  color: var(--color-text-muted);
+}
+
+.cta-section {
+  padding: 80px 0;
+  background: var(--color-text);
+  color: white;
+}
+
+.cta-inner {
+  text-align: center;
+}
+
+.cta-inner h2 {
+  font-size: 2rem;
+  font-weight: 800;
+  margin-bottom: 12px;
+}
+
+.cta-inner p {
+  color: #94a3b8;
+  margin-bottom: 32px;
+}
+
+.cta-actions {
+  display: flex;
+  gap: 16px;
+  justify-content: center;
+  flex-wrap: wrap;
+}
+
+.cta-section .btn-secondary {
+  background: transparent;
+  color: white;
+  border-color: #334155;
+}
+
+.cta-section .btn-secondary:hover {
+  background: #1e293b;
+  border-color: #475569;
+}
+
+@media (max-width: 900px) {
+  .hero-title { font-size: 2.5rem; }
+  .hero-stats { grid-template-columns: repeat(2, 1fr); }
+  .digest-grid, .telemetry-preview { grid-template-columns: 1fr; }
+  .features-grid { grid-template-columns: repeat(2, 1fr); }
+}
+
+@media (max-width: 480px) {
+  .hero { padding: 60px 0 48px; }
+  .hero-title { font-size: 2rem; }
+  .features-grid { grid-template-columns: 1fr; }
+}

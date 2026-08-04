@@ -1,0 +1,129 @@
+.telemetry-toolbar {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 24px;
+  flex-wrap: wrap;
+  gap: 16px;
+}
+
+.sort-controls {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+}
+
+.sort-controls label {
+  font-size: 0.8125rem;
+  color: var(--color-text-muted);
+}
+
+.sort-controls select {
+  padding: 8px 12px;
+  border: 1px solid var(--color-border);
+  border-radius: 8px;
+  font-size: 0.8125rem;
+  background: var(--color-white);
+}
+
+.telemetry-table-wrap {
+  overflow-x: auto;
+  margin-bottom: 48px;
+  border: 1px solid var(--color-border);
+  border-radius: var(--radius);
+}
+
+.telemetry-table {
+  width: 100%;
+  border-collapse: collapse;
+  font-size: 0.875rem;
+}
+
+.telemetry-table th {
+  text-align: left;
+  padding: 14px 16px;
+  background: var(--color-bg);
+  font-weight: 600;
+  font-size: 0.75rem;
+  text-transform: uppercase;
+  letter-spacing: 0.04em;
+  color: var(--color-text-muted);
+  border-bottom: 1px solid var(--color-border);
+}
+
+.telemetry-table td {
+  padding: 16px;
+  border-bottom: 1px solid var(--color-border);
+}
+
+.telemetry-table tr:last-child td {
+  border-bottom: none;
+}
+
+.telemetry-table tr:hover td {
+  background: var(--color-bg);
+}
+
+.model-name {
+  font-weight: 700;
+}
+
+.latency-cell {
+  color: var(--color-live);
+  font-weight: 500;
+}
+
+.benchmark-grid {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 24px;
+}
+
+.benchmark-card h3 {
+  font-size: 1.0625rem;
+  font-weight: 700;
+  margin-bottom: 4px;
+}
+
+.benchmark-bars {
+  margin-top: 20px;
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+}
+
+.benchmark-row {
+  display: grid;
+  grid-template-columns: 100px 1fr 48px;
+  align-items: center;
+  gap: 12px;
+}
+
+.benchmark-label {
+  font-size: 0.75rem;
+  color: var(--color-text-muted);
+}
+
+.benchmark-bar-track {
+  height: 8px;
+  background: var(--color-bg);
+  border-radius: 4px;
+  overflow: hidden;
+}
+
+.benchmark-bar-fill {
+  height: 100%;
+  background: linear-gradient(90deg, var(--color-flash), var(--color-flash-orange));
+  border-radius: 4px;
+  transition: width 0.6s ease;
+}
+
+.benchmark-score {
+  font-size: 0.75rem;
+  font-weight: 600;
+  text-align: right;
+}
+
+@media (max-width: 768px) {
+  .benchmark-grid { grid-template-columns: 1fr; }
+}

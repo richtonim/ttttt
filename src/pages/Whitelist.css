@@ -1,0 +1,48 @@
+.whitelist-layout {
+  display: grid;
+  grid-template-columns: 1fr 1.2fr;
+  gap: 32px;
+  max-width: 960px;
+}
+
+.whitelist-info {
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
+}
+
+.whitelist-info h3 {
+  font-size: 1rem;
+  font-weight: 700;
+  margin-bottom: 8px;
+}
+
+.whitelist-info p {
+  font-size: 0.875rem;
+  color: var(--color-text-muted);
+  margin-bottom: 12px;
+}
+
+.whitelist-info ul {
+  padding-left: 20px;
+  font-size: 0.875rem;
+  color: var(--color-text-muted);
+}
+
+.whitelist-info li {
+  margin-bottom: 6px;
+}
+
+.whitelist-form-card h2 {
+  font-size: 1.25rem;
+  font-weight: 700;
+  margin-bottom: 24px;
+}
+
+.whitelist-form-card textarea {
+  resize: vertical;
+}
+
+@media (max-width: 768px) {
+  .whitelist-layout { grid-template-columns: 1fr; }
+}
