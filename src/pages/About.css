@@ -1,0 +1,59 @@
+.about-content {
+  max-width: 800px;
+}
+
+.about-mission {
+  margin-bottom: 32px;
+}
+
+.about-mission h2 {
+  font-size: 1.5rem;
+  font-weight: 700;
+  margin-bottom: 16px;
+}
+
+.about-mission p {
+  color: var(--color-text-muted);
+  margin-bottom: 12px;
+  line-height: 1.7;
+}
+
+.about-values {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 24px;
+  margin-bottom: 32px;
+}
+
+.value-card h3 {
+  font-size: 1.0625rem;
+  font-weight: 700;
+  margin-bottom: 8px;
+}
+
+.value-card p {
+  font-size: 0.875rem;
+  color: var(--color-text-muted);
+}
+
+.about-team,
+.about-cta {
+  margin-bottom: 32px;
+}
+
+.about-team h2,
+.about-cta h2 {
+  font-size: 1.25rem;
+  font-weight: 700;
+  margin-bottom: 12px;
+}
+
+.about-team p,
+.about-cta p {
+  color: var(--color-text-muted);
+  margin-bottom: 20px;
+}
+
+@media (max-width: 768px) {
+  .about-values { grid-template-columns: 1fr; }
+}
