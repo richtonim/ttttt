@@ -1,0 +1,133 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Infrastructure — Briggstone AI Deployment Architecture</title>
+  <meta name="description" content="Briggstone infrastructure: cloud-native, on-premise, and hybrid deployment options with zero-trust security, auto-scaling, and 99.99% uptime SLA.">
+  <link rel="canonical" href="https://briggstone.in/infrastructure.html">
+  <meta property="og:title" content="Briggstone Infrastructure — Enterprise Deployment">
+  <meta property="og:url" content="https://briggstone.in/infrastructure.html">
+  <link rel="icon" href="assets/favicon.ico" type="image/x-icon">
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=JetBrains+Mono:wght@400;500&family=Plus+Jakarta+Sans:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+  <script src="https://cdn.tailwindcss.com"></script>
+  <script>tailwind.config={theme:{extend:{fontFamily:{sans:['"Plus Jakarta Sans"','Inter','system-ui','sans-serif'],mono:['"JetBrains Mono"','monospace']},colors:{brand:{blue:'#2563EB',mint:'#10B981','blue-soft':'#EFF6FF','mint-soft':'#E6F8F1'}}}}}</script>
+</head>
+<body class="bg-[#F8FAFC] text-slate-800 font-sans antialiased">
+  <header class="sticky top-0 z-50 bg-white/90 backdrop-blur-md border-b border-slate-100">
+    <nav class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 flex items-center justify-between h-16">
+      <a href="index.html" class="flex items-center gap-2"><img src="assets/logo.svg" alt="Briggstone" class="h-8 w-auto"><span class="hidden sm:inline-flex px-2 py-0.5 rounded-full text-[10px] font-bold bg-brand-blue-soft text-brand-blue uppercase">AI</span></a>
+      <div class="hidden lg:flex items-center gap-8">
+        <a href="platform.html" class="text-xs font-semibold tracking-widest text-slate-600 hover:text-brand-blue">PLATFORM</a>
+        <a href="solutions.html" class="text-xs font-semibold tracking-widest text-slate-600 hover:text-brand-blue">SOLUTIONS</a>
+        <a href="infrastructure.html" class="text-xs font-semibold tracking-widest text-brand-blue">INFRASTRUCTURE</a>
+        <a href="contact.html" class="text-xs font-semibold tracking-widest text-slate-600 hover:text-brand-blue">CONTACT</a>
+      </div>
+      <a href="register.html" class="hidden sm:inline-flex px-5 py-2 rounded-full text-xs font-semibold bg-[#0F172A] text-white">DEMO ACCESS</a>
+      <button id="mobile-menu-btn" class="lg:hidden p-2" aria-label="Open menu"><svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16M4 18h16"/></svg></button>
+    </nav>
+    <div id="mobile-menu" class="hidden lg:hidden border-t px-4 py-4 space-y-3">
+      <a href="platform.html" class="block text-xs font-semibold tracking-widest py-2">PLATFORM</a>
+      <a href="solutions.html" class="block text-xs font-semibold tracking-widest py-2">SOLUTIONS</a>
+      <a href="infrastructure.html" class="block text-xs font-semibold tracking-widest py-2">INFRASTRUCTURE</a>
+      <a href="contact.html" class="block text-xs font-semibold tracking-widest py-2">CONTACT</a>
+    </div>
+  </header>
+
+  <main>
+    <section class="py-16 lg:py-24">
+      <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+        <span class="inline-flex px-3 py-1 rounded-full text-[11px] font-bold tracking-widest bg-brand-blue-soft text-brand-blue uppercase mb-6">Infrastructure</span>
+        <h1 class="text-4xl sm:text-5xl font-extrabold text-[#0F172A] mb-6">Enterprise-Grade Deployment Architecture</h1>
+        <p class="text-lg text-slate-600 max-w-3xl leading-relaxed">Deploy Briggstone wherever your data lives — cloud, on-premise, or hybrid. Built on Kubernetes with zero-trust networking and automatic failover.</p>
+      </div>
+    </section>
+
+    <section class="pb-12">
+      <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 grid md:grid-cols-3 gap-6">
+        <div class="bg-white rounded-2xl border border-slate-100 p-8 shadow-sm text-center">
+          <div class="text-4xl mb-4">☁️</div>
+          <h2 class="text-lg font-bold text-[#0F172A] mb-2">Cloud Native</h2>
+          <p class="text-sm text-slate-500">AWS, Azure, GCP with managed Kubernetes. Auto-scaling bridge nodes and agent pools.</p>
+        </div>
+        <div class="bg-white rounded-2xl border border-slate-100 p-8 shadow-sm text-center">
+          <div class="text-4xl mb-4">🏢</div>
+          <h2 class="text-lg font-bold text-[#0F172A] mb-2">On-Premise</h2>
+          <p class="text-sm text-slate-500">Air-gapped deployments for regulated environments. Full data sovereignty control.</p>
+        </div>
+        <div class="bg-white rounded-2xl border border-slate-100 p-8 shadow-sm text-center">
+          <div class="text-4xl mb-4">🔗</div>
+          <h2 class="text-lg font-bold text-[#0F172A] mb-2">Hybrid Bridge</h2>
+          <p class="text-sm text-slate-500">Split topology with legacy on-prem and AI compute in cloud. Encrypted tunnel mesh.</p>
+        </div>
+      </div>
+    </section>
+
+    <section class="pb-20">
+      <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+        <div class="bg-[#0F172A] rounded-2xl p-8 lg:p-12">
+          <h2 class="text-2xl font-bold text-white mb-8">Infrastructure Specifications</h2>
+          <div class="grid sm:grid-cols-2 lg:grid-cols-4 gap-6">
+            <div class="border border-slate-700 rounded-xl p-5">
+              <p class="text-brand-mint font-mono text-2xl font-bold mb-1">99.99%</p>
+              <p class="text-slate-400 text-sm">Uptime SLA</p>
+            </div>
+            <div class="border border-slate-700 rounded-xl p-5">
+              <p class="text-brand-blue font-mono text-2xl font-bold mb-1">&lt;50ms</p>
+              <p class="text-slate-400 text-sm">Vector Lookup P99</p>
+            </div>
+            <div class="border border-slate-700 rounded-xl p-5">
+              <p class="text-brand-mint font-mono text-2xl font-bold mb-1">12K+</p>
+              <p class="text-slate-400 text-sm">Req/s STP Mode</p>
+            </div>
+            <div class="border border-slate-700 rounded-xl p-5">
+              <p class="text-brand-blue font-mono text-2xl font-bold mb-1">256-bit</p>
+              <p class="text-slate-400 text-sm">AES Encryption</p>
+            </div>
+          </div>
+          <div class="mt-10 font-mono text-sm text-green-400 bg-slate-900 rounded-xl p-6 overflow-x-auto">
+            <p class="text-slate-500 mb-2"># Quick deploy with Helm</p>
+            <p>helm install briggstone oci://registry.briggstone.in/charts/briggstone \</p>
+            <p class="pl-4">--set deployment.mode=hybrid \</p>
+            <p class="pl-4">--set security.zeroTrust=true</p>
+          </div>
+          <button id="copy-helm" class="mt-4 px-5 py-2.5 rounded-full text-sm font-semibold bg-brand-blue text-white hover:bg-blue-700">Copy Helm Command</button>
+        </div>
+      </div>
+    </section>
+
+    <section class="pb-20">
+      <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 grid lg:grid-cols-2 gap-8">
+        <div class="bg-white rounded-2xl border border-slate-100 p-8">
+          <h3 class="font-bold text-[#0F172A] mb-4">Security Architecture</h3>
+          <ul class="space-y-3 text-sm text-slate-600">
+            <li class="flex gap-3"><span class="text-brand-mint">✓</span> Zero-trust network segmentation between bridge zones</li>
+            <li class="flex gap-3"><span class="text-brand-mint">✓</span> mTLS for all inter-service communication</li>
+            <li class="flex gap-3"><span class="text-brand-mint">✓</span> Hardware security module (HSM) key management</li>
+            <li class="flex gap-3"><span class="text-brand-mint">✓</span> Automatic PII/token redaction at bridge layer</li>
+            <li class="flex gap-3"><span class="text-brand-mint">✓</span> Immutable audit logs with tamper detection</li>
+          </ul>
+        </div>
+        <div class="bg-white rounded-2xl border border-slate-100 p-8">
+          <h3 class="font-bold text-[#0F172A] mb-4">Scaling &amp; Resilience</h3>
+          <ul class="space-y-3 text-sm text-slate-600">
+            <li class="flex gap-3"><span class="text-brand-blue">✓</span> Horizontal auto-scaling for bridge and agent nodes</li>
+            <li class="flex gap-3"><span class="text-brand-blue">✓</span> Multi-region active-active failover</li>
+            <li class="flex gap-3"><span class="text-brand-blue">✓</span> Circuit breaker patterns for legacy system protection</li>
+            <li class="flex gap-3"><span class="text-brand-blue">✓</span> Graceful degradation with cached context fallback</li>
+            <li class="flex gap-3"><span class="text-brand-blue">✓</span> Blue-green deployment for zero-downtime updates</li>
+          </ul>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <footer class="border-t border-slate-100 bg-white py-10 text-center text-xs text-slate-400">&copy; 2026 Briggstone.in</footer>
+  <script src="js/common.js"></script>
+  <script>
+    document.getElementById('copy-helm').addEventListener('click', function () {
+      copyToClipboard('helm install briggstone oci://registry.briggstone.in/charts/briggstone --set deployment.mode=hybrid --set security.zeroTrust=true', 'Helm command copied');
+    });
+  </script>
+</body>
+</html>
