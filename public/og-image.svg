@@ -1,0 +1,16 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1200 630" fill="none">
+  <rect width="1200" height="630" fill="#090D16"/>
+  <circle cx="980" cy="120" r="220" fill="#10B981" opacity="0.08"/>
+  <circle cx="160" cy="520" r="180" fill="#F59E0B" opacity="0.06"/>
+  <rect x="80" y="80" width="72" height="72" rx="16" fill="#111827" stroke="#1F2937" stroke-width="2"/>
+  <rect x="96" y="96" width="40" height="40" rx="6" stroke="#10B981" stroke-width="3" fill="none"/>
+  <path d="M104 112h16M104 120h22M104 128h12" stroke="#F8FAFC" stroke-width="2.5" stroke-linecap="round"/>
+  <circle cx="128" cy="128" r="10" fill="#090D16" stroke="#10B981" stroke-width="2.5"/>
+  <path d="M124 128.5l3 3 6-6.2" stroke="#10B981" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"/>
+  <text x="180" y="128" fill="#F8FAFC" font-family="Inter, ui-sans-serif, system-ui, sans-serif" font-size="42" font-weight="700" letter-spacing="0.06em">CLAIMEASE.AI</text>
+  <text x="80" y="280" fill="#F8FAFC" font-family="Inter, ui-sans-serif, system-ui, sans-serif" font-size="64" font-weight="700">Instant Claims. Zero Friction.</text>
+  <text x="80" y="360" fill="#10B981" font-family="Inter, ui-sans-serif, system-ui, sans-serif" font-size="48" font-weight="600">Uncompromising Fraud Protection.</text>
+  <text x="80" y="460" fill="#94A3B8" font-family="JetBrains Mono, ui-monospace, monospace" font-size="24">Autonomous AI Claims &amp; Fraud Guard Engine · claimease.in</text>
+  <rect x="80" y="520" width="220" height="48" rx="8" fill="#10B981"/>
+  <text x="110" y="552" fill="#090D16" font-family="Inter, ui-sans-serif, system-ui, sans-serif" font-size="20" font-weight="700">99.6% Fraud Guard</text>
+</svg>

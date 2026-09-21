@@ -1,0 +1,28 @@
+{
+  "name": "ClaimEase.AI — Autonomous AI Claims & Fraud Guard Engine",
+  "short_name": "ClaimEase",
+  "description": "Instant claims adjudication with multimodal document intelligence and GNN fraud protection.",
+  "start_url": "/",
+  "display": "standalone",
+  "background_color": "#090D16",
+  "theme_color": "#090D16",
+  "lang": "en",
+  "icons": [
+    {
+      "src": "/favicon.svg",
+      "sizes": "any",
+      "type": "image/svg+xml",
+      "purpose": "any"
+    },
+    {
+      "src": "/favicon-32.png",
+      "sizes": "32x32",
+      "type": "image/png"
+    },
+    {
+      "src": "/apple-touch-icon.png",
+      "sizes": "180x180",
+      "type": "image/png"
+    }
+  ]
+}
