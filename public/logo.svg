@@ -1,0 +1,19 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 200 200" fill="none">
+  <defs>
+    <linearGradient id="g" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#5b4fd4"/>
+      <stop offset="50%" stop-color="#7c6df0"/>
+      <stop offset="100%" stop-color="#9b8ff5"/>
+    </linearGradient>
+  </defs>
+  <rect width="200" height="200" rx="40" fill="#0a0a0a"/>
+  <path d="M100 30 L170 65 L170 135 L100 170 L30 135 L30 65 Z" stroke="url(#g)" stroke-width="2" fill="none" opacity="0.3"/>
+  <path d="M100 50 L150 75 L150 125 L100 150 L50 125 L50 75 Z" stroke="url(#g)" stroke-width="2.5" fill="none"/>
+  <circle cx="100" cy="100" r="12" fill="url(#g)"/>
+  <line x1="100" y1="50" x2="100" y2="88" stroke="url(#g)" stroke-width="1.5" opacity="0.6"/>
+  <line x1="100" y1="112" x2="100" y2="150" stroke="url(#g)" stroke-width="1.5" opacity="0.6"/>
+  <line x1="50" y1="75" x2="88" y2="94" stroke="url(#g)" stroke-width="1.5" opacity="0.6"/>
+  <line x1="112" y1="94" x2="150" y2="75" stroke="url(#g)" stroke-width="1.5" opacity="0.6"/>
+  <line x1="50" y1="125" x2="88" y2="106" stroke="url(#g)" stroke-width="1.5" opacity="0.6"/>
+  <line x1="112" y1="106" x2="150" y2="125" stroke="url(#g)" stroke-width="1.5" opacity="0.6"/>
+</svg>
