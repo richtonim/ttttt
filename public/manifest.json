@@ -1,0 +1,21 @@
+{
+  "name": "Cognis",
+  "short_name": "Cognis",
+  "description": "Cognitive intelligence platform for AI agents, knowledge reasoning, and enterprise automation.",
+  "start_url": "/",
+  "display": "standalone",
+  "background_color": "#050505",
+  "theme_color": "#050505",
+  "icons": [
+    {
+      "src": "/favicon-32.png",
+      "sizes": "32x32",
+      "type": "image/png"
+    },
+    {
+      "src": "/logo.png",
+      "sizes": "512x512",
+      "type": "image/png"
+    }
+  ]
+}
