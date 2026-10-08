@@ -1,0 +1,121 @@
+.api-content {
+  max-width: 800px;
+}
+
+.api-intro {
+  margin-bottom: 40px;
+}
+
+.api-intro h2 {
+  font-size: 1.25rem;
+  font-weight: 700;
+  margin-bottom: 12px;
+}
+
+.api-intro p {
+  color: var(--color-text-muted);
+  margin-bottom: 16px;
+}
+
+.api-intro code {
+  background: var(--color-bg);
+  padding: 2px 6px;
+  border-radius: 4px;
+  font-size: 0.8125rem;
+}
+
+.api-base-url {
+  padding: 12px 16px;
+  background: var(--color-text);
+  color: #10b981;
+  border-radius: 8px;
+  font-size: 0.875rem;
+}
+
+.api-section-title {
+  font-size: 1.25rem;
+  font-weight: 700;
+  margin-bottom: 16px;
+}
+
+.api-endpoints {
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+  margin-bottom: 32px;
+}
+
+.endpoint-header {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  margin-bottom: 8px;
+}
+
+.method-badge {
+  font-size: 0.6875rem;
+  font-weight: 700;
+  padding: 3px 8px;
+  border-radius: 4px;
+  font-family: var(--font-mono);
+}
+
+.method-get { background: #ecfdf5; color: #047857; }
+.method-post { background: #eff6ff; color: #1d4ed8; }
+.method-ws { background: #fdf4ff; color: #7c3aed; }
+
+.endpoint-path {
+  font-size: 0.875rem;
+  font-weight: 500;
+}
+
+.api-endpoint p {
+  font-size: 0.875rem;
+  color: var(--color-text-muted);
+}
+
+.api-example {
+  margin-bottom: 24px;
+}
+
+.api-example h3 {
+  font-size: 0.9375rem;
+  font-weight: 600;
+  margin-bottom: 12px;
+}
+
+.api-example pre {
+  background: var(--color-text);
+  color: #e2e8f0;
+  padding: 20px;
+  border-radius: 8px;
+  overflow-x: auto;
+  font-size: 0.8125rem;
+  line-height: 1.6;
+}
+
+.rate-table {
+  width: 100%;
+  border-collapse: collapse;
+  font-size: 0.875rem;
+}
+
+.rate-table th,
+.rate-table td {
+  padding: 10px 12px;
+  text-align: left;
+  border-bottom: 1px solid var(--color-border);
+}
+
+.rate-table th {
+  font-weight: 600;
+  font-size: 0.75rem;
+  text-transform: uppercase;
+  color: var(--color-text-muted);
+}
+
+.api-rate-limits h3 {
+  font-size: 0.9375rem;
+  font-weight: 600;
+  margin-bottom: 12px;
+}

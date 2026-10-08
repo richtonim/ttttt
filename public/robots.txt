@@ -1,0 +1,10 @@
+User-agent: *
+Allow: /
+
+Sitemap: https://aiflash.news/sitemap.xml
+
+# Disallow auth and purchase pages from indexing
+Disallow: /login
+Disallow: /register
+Disallow: /purchase
+Disallow: /dashboard
