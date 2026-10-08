@@ -1,0 +1,123 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Node Inspector — NodeRefine</title>
+  <meta name="description" content="Debug individual AI workflow nodes with deep I/O inspection, execution timelines, and replay capabilities. Pinpoint failures at the node level.">
+  <link rel="canonical" href="https://noderefine.help/node-inspector.html">
+  <meta property="og:title" content="Node Inspector — NodeRefine">
+  <meta property="og:url" content="https://noderefine.help/node-inspector.html">
+  <link rel="icon" href="/favicon.ico" sizes="32x32">
+  <link rel="icon" type="image/svg+xml" href="/favicon.svg">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=JetBrains+Mono:wght@400;500&display=swap" rel="stylesheet">
+</head>
+<body>
+  <a href="#main" class="skip-link">Skip to main content</a>
+  <nav class="nav" role="navigation" aria-label="Main navigation">
+    <div class="nav-inner">
+      <a href="index.html" class="nav-logo"><img src="/logo.svg" alt="" width="32" height="32">NodeRefine</a>
+      <div class="nav-links">
+        <a href="product.html">Product</a>
+        <a href="solutions.html">Solutions</a>
+        <a href="developers.html">Developers</a>
+        <a href="documentation.html">Docs</a>
+        <a href="pricing.html">Pricing</a>
+      </div>
+      <div class="nav-actions">
+        <a href="login.html" class="btn btn-ghost btn-sm">Log in</a>
+        <a href="register.html" class="btn btn-primary btn-sm">Get Started</a>
+      </div>
+      <button class="nav-toggle" aria-label="Toggle menu" aria-expanded="false"><span></span><span></span><span></span></button>
+    </div>
+  </nav>
+
+  <main id="main">
+    <section class="page-hero">
+      <div class="container">
+        <span class="section-label">Node Inspector</span>
+        <h1>Debug Every Node in Detail</h1>
+        <p>Inspect inputs, outputs, execution logs, and state changes for any node in your AI workflow. Replay failures and fix with confidence.</p>
+      </div>
+    </section>
+
+    <section>
+      <div class="container">
+        <div class="grid-2" style="gap:48px">
+          <div class="glass-card fade-in">
+            <h3>Input / Output Inspection</h3>
+            <p style="margin-top:12px">View exact data passed into and out of each node. Compare expected vs. actual outputs with diff highlighting.</p>
+          </div>
+          <div class="glass-card fade-in">
+            <h3>Execution Timeline</h3>
+            <p style="margin-top:12px">Chronological view of every execution event, API call, and state transition within a node.</p>
+          </div>
+          <div class="glass-card fade-in">
+            <h3>Failure Replay</h3>
+            <p style="margin-top:12px">Re-run failed node executions with the same inputs to reproduce and verify fixes.</p>
+          </div>
+          <div class="glass-card fade-in">
+            <h3>Dependency Tracing</h3>
+            <p style="margin-top:12px">Follow data lineage upstream and downstream to understand how issues propagate across nodes.</p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section>
+      <div class="container">
+        <div class="dashboard-mock fade-in">
+          <div class="dashboard-stats">
+            <div class="stat-card">
+              <div class="label">Node Status</div>
+              <div class="value" style="color:var(--error)">Failed</div>
+              <div class="change negative">LLM Response Parser</div>
+            </div>
+            <div class="stat-card">
+              <div class="label">Execution Time</div>
+              <div class="value"><span data-count="4.7" data-suffix="s" data-decimals="1">0</span></div>
+              <div class="change negative">↑ 3.2s above avg</div>
+            </div>
+            <div class="stat-card">
+              <div class="label">Tokens Used</div>
+              <div class="value"><span data-count="2847" data-decimals="0">0</span></div>
+              <div class="change negative">↑ 42% over budget</div>
+            </div>
+            <div class="stat-card">
+              <div class="label">Retry Count</div>
+              <div class="value"><span data-count="3" data-decimals="0">0</span></div>
+              <div class="change negative">Max retries reached</div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section class="cta-section">
+      <div class="container">
+        <h2>Inspect your nodes today</h2>
+        <div class="cta-actions">
+          <a href="register.html" class="btn btn-primary btn-lg">Get Started</a>
+          <a href="workflow-analysis.html" class="btn btn-secondary btn-lg">Workflow Analysis</a>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <footer class="footer" role="contentinfo">
+    <div class="container">
+      <div class="footer-grid">
+        <div class="footer-brand"><a href="index.html" class="nav-logo"><img src="/logo.svg" alt="" width="32" height="32">NodeRefine</a><p>AI workflow diagnostics and node optimization.</p></div>
+        <div class="footer-col"><h4>Product</h4><a href="product.html">Overview</a><a href="node-inspector.html">Node Inspector</a><a href="pricing.html">Pricing</a></div>
+        <div class="footer-col"><h4>Developers</h4><a href="developers.html">Developer Hub</a><a href="documentation.html">Documentation</a></div>
+        <div class="footer-col"><h4>Company</h4><a href="about.html">About</a><a href="contact.html">Contact</a></div>
+        <div class="footer-col"><h4>Support</h4><a href="help-center.html">Help Center</a><a href="mailto:support@noderefine.help">Email</a></div>
+      </div>
+      <div class="footer-bottom"><span>&copy; 2026 NodeRefine.</span></div>
+    </div>
+  </footer>
+  <script type="module" src="/src/scripts/main.js"></script>
+</body>
+</html>

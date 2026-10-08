@@ -1,0 +1,150 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Developers — NodeRefine API, SDK & CLI</title>
+  <meta name="description" content="Integrate NodeRefine with our REST API, Python/Node.js/Go SDKs, Webhooks, and CLI. Quick start guides and code examples for AI workflow diagnostics.">
+  <link rel="canonical" href="https://noderefine.help/developers.html">
+  <meta property="og:title" content="Developers — NodeRefine">
+  <meta property="og:url" content="https://noderefine.help/developers.html">
+  <link rel="icon" href="/favicon.ico" sizes="32x32">
+  <link rel="icon" type="image/svg+xml" href="/favicon.svg">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=JetBrains+Mono:wght@400;500&display=swap" rel="stylesheet">
+</head>
+<body>
+  <a href="#main" class="skip-link">Skip to main content</a>
+  <nav class="nav" role="navigation" aria-label="Main navigation">
+    <div class="nav-inner">
+      <a href="index.html" class="nav-logo"><img src="/logo.svg" alt="" width="32" height="32">NodeRefine</a>
+      <div class="nav-links">
+        <a href="product.html">Product</a>
+        <a href="solutions.html">Solutions</a>
+        <a href="developers.html">Developers</a>
+        <a href="documentation.html">Docs</a>
+        <a href="pricing.html">Pricing</a>
+      </div>
+      <div class="nav-actions">
+        <a href="login.html" class="btn btn-ghost btn-sm">Log in</a>
+        <a href="register.html" class="btn btn-primary btn-sm">Get Started</a>
+      </div>
+      <button class="nav-toggle" aria-label="Toggle menu" aria-expanded="false"><span></span><span></span><span></span></button>
+    </div>
+  </nav>
+
+  <main id="main">
+    <section class="page-hero">
+      <div class="container">
+        <span class="section-label">Developer Hub</span>
+        <h1>Build with NodeRefine</h1>
+        <p>REST API, SDKs for Python, Node.js, and Go, Webhooks, and CLI — everything you need to integrate workflow diagnostics.</p>
+      </div>
+    </section>
+
+    <section>
+      <div class="container">
+        <div class="grid-4">
+          <div class="glass-card feature-card fade-in">
+            <div class="icon">API</div>
+            <h3>REST API</h3>
+            <p>Full-featured HTTP API with OpenAPI spec. Analyze workflows, inspect nodes, and retrieve recommendations.</p>
+          </div>
+          <div class="glass-card feature-card fade-in">
+            <div class="icon">SDK</div>
+            <h3>SDKs</h3>
+            <p>Official libraries for Python, Node.js, and Go with typed interfaces and async support.</p>
+          </div>
+          <div class="glass-card feature-card fade-in">
+            <div class="icon">⚡</div>
+            <h3>Webhooks</h3>
+            <p>Real-time event notifications for errors, threshold breaches, and optimization opportunities.</p>
+          </div>
+          <div class="glass-card feature-card fade-in">
+            <div class="icon">&gt;_</div>
+            <h3>CLI</h3>
+            <p>Command-line tool for scanning workflows, viewing reports, and managing configurations.</p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section>
+      <div class="container">
+        <div class="section-header fade-in">
+          <h2>Quick Start</h2>
+          <p>Get up and running in three steps.</p>
+        </div>
+        <div class="grid-2" style="align-items:start;gap:48px">
+          <div class="quickstart-steps fade-in">
+            <div class="quickstart-step"><div><h3>Install the SDK</h3><p>pip install noderefine · npm install @noderefine/sdk · go get github.com/noderefine/sdk</p></div></div>
+            <div class="quickstart-step"><div><h3>Authenticate</h3><p>Create an API key from your dashboard or use the CLI: nr auth login</p></div></div>
+            <div class="quickstart-step"><div><h3>Analyze</h3><p>Connect your first workflow and receive diagnostics in seconds.</p></div></div>
+          </div>
+          <div class="code-block fade-in">
+            <div class="code-header">
+              <div class="code-dots"><span></span><span></span><span></span></div>
+              <span class="code-lang">Terminal</span>
+              <button class="btn btn-ghost btn-sm" data-copy>Copy</button>
+            </div>
+            <div class="code-body">
+              <pre><span class="cm"># Install CLI</span>
+npm install -g @noderefine/cli
+
+<span class="cm"># Authenticate</span>
+nr auth login
+
+<span class="cm"># Scan a workflow</span>
+nr workflows scan --id wf_prod_agent_v2
+
+<span class="cm"># Inspect a specific node</span>
+nr nodes inspect --workflow wf_prod_agent_v2 --node llm_parser
+
+<span class="cm"># Set up webhook</span>
+nr webhooks create --url https://api.example.com/hooks/nr \
+  --events issue.detected,scan.completed</pre>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section>
+      <div class="container">
+        <div class="grid-2" style="gap:24px">
+          <div class="code-block fade-in">
+            <div class="code-header"><div class="code-dots"><span></span><span></span><span></span></div><span class="code-lang">Python</span></div>
+            <div class="code-body"><pre><span class="kw">from</span> noderefine <span class="kw">import</span> Client
+client = Client(api_key=<span class="str">"nr_live_..."</span>)
+scan = client.workflows.<span class="fn">analyze</span>(<span class="str">"wf_id"</span>)</pre></div>
+          </div>
+          <div class="code-block fade-in">
+            <div class="code-header"><div class="code-dots"><span></span><span></span><span></span></div><span class="code-lang">Node.js</span></div>
+            <div class="code-body"><pre><span class="kw">import</span> { NodeRefine } <span class="kw">from</span> <span class="str">'@noderefine/sdk'</span>;
+<span class="kw">const</span> client = <span class="kw">new</span> <span class="fn">NodeRefine</span>({ apiKey });
+<span class="kw">const</span> scan = <span class="kw">await</span> client.workflows.<span class="fn">analyze</span>(<span class="str">'wf_id'</span>);</pre></div>
+          </div>
+        </div>
+        <div style="text-align:center;margin-top:48px">
+          <a href="documentation.html" class="btn btn-primary btn-lg">Full API Reference</a>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <footer class="footer" role="contentinfo">
+    <div class="container">
+      <div class="footer-grid">
+        <div class="footer-brand"><a href="index.html" class="nav-logo"><img src="/logo.svg" alt="" width="32" height="32">NodeRefine</a><p>Developer tools for AI workflow diagnostics.</p></div>
+        <div class="footer-col"><h4>Developers</h4><a href="developers.html">Developer Hub</a><a href="documentation.html">Documentation</a><a href="https://github.com/noderefine" rel="noopener noreferrer">GitHub</a></div>
+        <div class="footer-col"><h4>Product</h4><a href="product.html">Overview</a><a href="pricing.html">Pricing</a></div>
+        <div class="footer-col"><h4>Support</h4><a href="help-center.html">Help Center</a><a href="contact.html">Contact</a></div>
+        <div class="footer-col"><h4>Company</h4><a href="about.html">About</a><a href="blog.html">Blog</a></div>
+      </div>
+      <div class="footer-bottom"><span>&copy; 2026 NodeRefine.</span></div>
+    </div>
+  </footer>
+  <script type="module" src="/src/scripts/main.js"></script>
+</body>
+</html>

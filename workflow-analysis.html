@@ -1,0 +1,135 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Workflow Analysis — NodeRefine</title>
+  <meta name="description" content="Analyze your entire AI workflow pipeline. Detect bottlenecks, map dependencies, and get actionable optimization recommendations with NodeRefine Workflow Scanner.">
+  <link rel="canonical" href="https://noderefine.help/workflow-analysis.html">
+  <meta property="og:title" content="Workflow Analysis — NodeRefine">
+  <meta property="og:url" content="https://noderefine.help/workflow-analysis.html">
+  <link rel="icon" href="/favicon.ico" sizes="32x32">
+  <link rel="icon" type="image/svg+xml" href="/favicon.svg">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=JetBrains+Mono:wght@400;500&display=swap" rel="stylesheet">
+</head>
+<body>
+  <a href="#main" class="skip-link">Skip to main content</a>
+  <nav class="nav" role="navigation" aria-label="Main navigation">
+    <div class="nav-inner">
+      <a href="index.html" class="nav-logo"><img src="/logo.svg" alt="" width="32" height="32">NodeRefine</a>
+      <div class="nav-links">
+        <a href="product.html">Product</a>
+        <a href="solutions.html">Solutions</a>
+        <a href="developers.html">Developers</a>
+        <a href="documentation.html">Docs</a>
+        <a href="pricing.html">Pricing</a>
+      </div>
+      <div class="nav-actions">
+        <a href="login.html" class="btn btn-ghost btn-sm">Log in</a>
+        <a href="register.html" class="btn btn-primary btn-sm">Get Started</a>
+      </div>
+      <button class="nav-toggle" aria-label="Toggle menu" aria-expanded="false"><span></span><span></span><span></span></button>
+    </div>
+  </nav>
+
+  <main id="main">
+    <section class="page-hero">
+      <div class="container">
+        <span class="section-label">Workflow Scanner</span>
+        <h1>Full-Pipeline Workflow Analysis</h1>
+        <p>Map, scan, and diagnose your entire AI workflow in seconds. Identify the weakest links before they impact production.</p>
+      </div>
+    </section>
+
+    <section>
+      <div class="container">
+        <div class="grid-3">
+          <div class="glass-card feature-card fade-in">
+            <div class="icon">◈</div>
+            <h3>Topology Mapping</h3>
+            <p>Automatically discover and visualize every node, branch, and data flow in your pipeline.</p>
+          </div>
+          <div class="glass-card feature-card fade-in">
+            <div class="icon">◎</div>
+            <h3>Health Scoring</h3>
+            <p>Get a 0–100 health score for each node and the overall workflow with trend tracking.</p>
+          </div>
+          <div class="glass-card feature-card fade-in">
+            <div class="icon">⬡</div>
+            <h3>Issue Prioritization</h3>
+            <p>Issues ranked by severity, frequency, and business impact so you fix what matters first.</p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section>
+      <div class="container">
+        <div class="section-header fade-in">
+          <h2>What Workflow Analysis Detects</h2>
+        </div>
+        <div class="issue-tags fade-in">
+          <span class="issue-tag"><span class="indicator"></span>Slow Nodes</span>
+          <span class="issue-tag"><span class="indicator"></span>Broken Connections</span>
+          <span class="issue-tag"><span class="indicator"></span>Redundant Steps</span>
+          <span class="issue-tag"><span class="indicator"></span>Missing Error Handlers</span>
+          <span class="issue-tag"><span class="indicator"></span>Token Waste</span>
+          <span class="issue-tag"><span class="indicator"></span>Stale Configurations</span>
+        </div>
+      </div>
+    </section>
+
+    <section>
+      <div class="container">
+        <div class="code-block fade-in">
+          <div class="code-header">
+            <div class="code-dots"><span></span><span></span><span></span></div>
+            <span class="code-lang">workflow-scan.js</span>
+            <button class="btn btn-ghost btn-sm" data-copy>Copy</button>
+          </div>
+          <div class="code-body">
+            <pre><span class="kw">import</span> { NodeRefine } <span class="kw">from</span> <span class="str">'@noderefine/sdk'</span>;
+
+<span class="kw">const</span> client = <span class="kw">new</span> <span class="fn">NodeRefine</span>({ apiKey: process.env.NR_API_KEY });
+
+<span class="kw">const</span> report = <span class="kw">await</span> client.workflows.<span class="fn">scan</span>({
+  workflowId: <span class="str">'agent-pipeline-v3'</span>,
+  options: { depth: <span class="str">'full'</span>, includeMetrics: <span class="kw">true</span> }
+});
+
+console.<span class="fn">log</span>(<span class="str">`Health: ${report.healthScore}%`</span>);
+console.<span class="fn">log</span>(<span class="str">`Issues found: ${report.issues.length}`</span>);
+report.issues.<span class="fn">forEach</span>(i => console.<span class="fn">log</span>(<span class="str">`  [${i.severity}] ${i.nodeId}: ${i.message}`</span>));</pre>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section class="cta-section">
+      <div class="container">
+        <h2>Scan your first workflow today</h2>
+        <div class="cta-actions">
+          <a href="register.html" class="btn btn-primary btn-lg">Analyze a Workflow</a>
+          <a href="documentation.html" class="btn btn-secondary btn-lg">Read the Docs</a>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <footer class="footer" role="contentinfo">
+    <div class="container">
+      <div class="footer-grid">
+        <div class="footer-brand"><a href="index.html" class="nav-logo"><img src="/logo.svg" alt="" width="32" height="32">NodeRefine</a><p>AI workflow diagnostics, node optimization, and intelligent debugging.</p></div>
+        <div class="footer-col"><h4>Product</h4><a href="product.html">Overview</a><a href="workflow-analysis.html">Workflow Analysis</a><a href="node-inspector.html">Node Inspector</a><a href="pricing.html">Pricing</a></div>
+        <div class="footer-col"><h4>Solutions</h4><a href="solutions.html">Use Cases</a></div>
+        <div class="footer-col"><h4>Developers</h4><a href="developers.html">Developer Hub</a><a href="documentation.html">Documentation</a></div>
+        <div class="footer-col"><h4>Company</h4><a href="about.html">About</a><a href="contact.html">Contact</a></div>
+      </div>
+      <div class="footer-bottom"><span>&copy; 2026 NodeRefine.</span><div class="footer-social"><a href="mailto:support@noderefine.help">support@noderefine.help</a></div></div>
+    </div>
+  </footer>
+  <script type="module" src="/src/scripts/main.js"></script>
+</body>
+</html>
