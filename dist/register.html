@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Register — Request Vectoris.dev Whitelist Access</title>
+  <meta name="description" content="Request whitelist access to Vectoris.dev private beta. Registration requires approval from our team before platform access is granted.">
+  <link rel="canonical" href="https://vectoris.dev/register.html">
+  <link rel="icon" href="assets/img/favicon.ico" type="image/x-icon">
+  <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;500;600;700&display=swap" rel="stylesheet">
+  <script src="https://cdn.tailwindcss.com"></script>
+  <script>tailwind.config={theme:{extend:{colors:{deep:'#0F172A',vector:'#4F46E5','vector-soft':'#EEF2FF',mint:'#10B981'},fontFamily:{sans:['Plus Jakarta Sans','Inter','sans-serif']},boxShadow:{card:'0 10px 30px -5px rgba(15, 23, 42, 0.05)'}}}};</script>
+</head>
+<body class="bg-[#FAFAFC] text-deep font-sans antialiased min-h-screen flex flex-col">
+  <header class="border-b border-slate-100 bg-white/80 backdrop-blur">
+    <div class="max-w-7xl mx-auto px-4 py-4 flex justify-between items-center">
+      <a href="index.html"><img src="assets/img/logo.svg" alt="Vectoris.dev" class="h-8" width="160" height="32"></a>
+      <a href="login.html" class="text-sm text-slate-600 hover:text-vector">Sign In</a>
+    </div>
+  </header>
+
+  <main class="flex-1 flex items-center justify-center px-4 py-12">
+    <div class="w-full max-w-lg">
+      <div class="bg-white rounded-2xl border border-slate-100 shadow-card p-8">
+        <span class="inline-flex px-3 py-1 rounded-full bg-vector-soft text-vector text-xs font-semibold uppercase mb-4">Whitelist Enrollment</span>
+        <h1 class="text-2xl font-bold mb-2">Request Access</h1>
+        <p class="text-slate-600 text-sm mb-6">Vectoris.dev is in private beta. Submit your details to join the whitelist. Our team reviews all applications within 48 hours.</p>
+
+        <form data-whitelist-form class="space-y-4">
+          <div class="grid sm:grid-cols-2 gap-4">
+            <div>
+              <label for="name" class="block text-sm font-medium mb-1">Full Name</label>
+              <input type="text" id="name" name="name" required placeholder="Jane Smith" class="w-full px-4 py-3 rounded-xl border border-slate-200 text-sm focus:outline-none focus:ring-2 focus:ring-vector/30">
+            </div>
+            <div>
+              <label for="company" class="block text-sm font-medium mb-1">Company</label>
+              <input type="text" id="company" name="company" required placeholder="Acme AI" class="w-full px-4 py-3 rounded-xl border border-slate-200 text-sm focus:outline-none focus:ring-2 focus:ring-vector/30">
+            </div>
+          </div>
+          <div>
+            <label for="email" class="block text-sm font-medium mb-1">Work Email</label>
+            <input type="email" id="email" name="email" required placeholder="jane@company.com" class="w-full px-4 py-3 rounded-xl border border-slate-200 text-sm focus:outline-none focus:ring-2 focus:ring-vector/30">
+          </div>
+          <div>
+            <label for="use-case" class="block text-sm font-medium mb-1">Primary Use Case</label>
+            <select id="use-case" name="use_case" class="w-full px-4 py-3 rounded-xl border border-slate-200 text-sm focus:outline-none focus:ring-2 focus:ring-vector/30 bg-white">
+              <option>RAG / Retrieval Pipeline</option>
+              <option>Agent Memory System</option>
+              <option>Semantic Search</option>
+              <option>Multi-Modal Embeddings</option>
+              <option>Enterprise Infrastructure</option>
+              <option>Other</option>
+            </select>
+          </div>
+          <div>
+            <label for="message" class="block text-sm font-medium mb-1">Additional Context (optional)</label>
+            <textarea id="message" name="message" rows="3" placeholder="Expected vector count, latency requirements..." class="w-full px-4 py-3 rounded-xl border border-slate-200 text-sm focus:outline-none focus:ring-2 focus:ring-vector/30 resize-none"></textarea>
+          </div>
+          <button type="submit" class="w-full py-3 rounded-full bg-vector text-white text-sm font-semibold uppercase tracking-wide hover:bg-indigo-600 transition-colors">Submit Whitelist Request</button>
+        </form>
+
+        <p class="text-xs text-slate-400 mt-4 text-center">By submitting, you agree to our private beta terms. No account is created until whitelist approval.</p>
+      </div>
+    </div>
+  </main>
+
+  <footer class="py-6 text-center text-sm text-slate-500">&copy; 2026 Vectoris.dev</footer>
+  <script src="assets/js/shared.js"></script>
+</body>
+</html>
