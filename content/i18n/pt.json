@@ -1,0 +1,40 @@
+{
+  "common": {
+    "startBuilding": "Começar a construir",
+    "bookDemo": "Agendar demo",
+    "learnMore": "Saiba mais",
+    "contactSales": "Contatar vendas",
+    "viewDocs": "Ver documentação",
+    "exploreApi": "Explorar API",
+    "signIn": "Entrar",
+    "startFree": "Começar grátis",
+    "talkToTeam": "Falar com a equipe",
+    "explorePlatform": "Explorar a plataforma",
+    "contactTeam": "Contatar equipe",
+    "returnHome": "Voltar ao início",
+    "viewPlatform": "Ver plataforma",
+    "useTemplate": "Usar modelo",
+    "preview": "Visualizar",
+    "comingSoon": "Em breve",
+    "illustrative": "Ilustrativo",
+    "placeholder": "Placeholder",
+    "example": "Exemplo"
+  },
+  "hero": {
+    "badge": "Infraestrutura de IA para equipes modernas",
+    "title": "Construa a próxima camada do seu negócio com IA.",
+    "subtitle": "Conecte modelos, conhecimento empresarial e fluxos de trabalho em uma plataforma segura.",
+    "modelAgnostic": "Agnóstico de modelos",
+    "enterpriseReady": "Pronto para empresas",
+    "builtForDevs": "Feito para desenvolvedores"
+  },
+  "footer": {
+    "tagline": "NextLayer — A camada inteligente para o negócio moderno.",
+    "copyright": "© {year} NextLayer"
+  },
+  "whitelist": {
+    "title": "Acesso antecipado necessário",
+    "description": "Registro e acesso à plataforma estão disponíveis apenas por convite. Entre na lista de espera.",
+    "joinWaitlist": "Entrar na lista"
+  }
+}

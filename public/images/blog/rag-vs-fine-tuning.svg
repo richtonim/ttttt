@@ -1,0 +1,18 @@
+<svg width="800" height="400" viewBox="0 0 800 400" fill="none" xmlns="http://www.w3.org/2000/svg">
+  <rect width="800" height="400" fill="#F6F7F9"/>
+  <rect x="120" y="60" width="240" height="280" rx="16" fill="white" stroke="#E7E9ED"/>
+  <rect x="440" y="60" width="240" height="280" rx="16" fill="white" stroke="#7157FF" stroke-opacity="0.3"/>
+  <text x="200" y="120" text-anchor="middle" font-family="system-ui" font-size="14" fill="#626873">RAG</text>
+  <rect x="150" y="140" width="180" height="6" rx="2" fill="#EEEAFE"/>
+  <rect x="150" y="158" width="140" height="6" rx="2" fill="#E7E9ED"/>
+  <rect x="150" y="176" width="160" height="6" rx="2" fill="#E7E9ED"/>
+  <circle cx="200" cy="240" r="40" fill="#7157FF" fill-opacity="0.1" stroke="#7157FF" stroke-width="1.5"/>
+  <path d="M185 240 L195 250 L215 230" stroke="#7157FF" stroke-width="2" fill="none"/>
+  <text x="560" y="120" text-anchor="middle" font-family="system-ui" font-size="14" fill="#626873">Fine-Tuning</text>
+  <rect x="470" y="140" width="180" height="6" rx="2" fill="#EEEAFE"/>
+  <rect x="470" y="158" width="140" height="6" rx="2" fill="#E7E9ED"/>
+  <rect x="470" y="176" width="160" height="6" rx="2" fill="#E7E9ED"/>
+  <rect x="500" y="220" width="120" height="60" rx="8" fill="#7157FF" fill-opacity="0.15"/>
+  <path d="M360 200 L440 200" stroke="#7157FF" stroke-width="2" stroke-dasharray="6 4"/>
+  <text x="400" y="195" text-anchor="middle" font-family="system-ui" font-size="12" fill="#7157FF">vs</text>
+</svg>

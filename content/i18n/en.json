@@ -1,0 +1,40 @@
+{
+  "common": {
+    "startBuilding": "Start building",
+    "bookDemo": "Book a demo",
+    "learnMore": "Learn more",
+    "contactSales": "Contact sales",
+    "viewDocs": "View documentation",
+    "exploreApi": "Explore API",
+    "signIn": "Sign in",
+    "startFree": "Start free",
+    "talkToTeam": "Talk to our team",
+    "explorePlatform": "Explore the platform",
+    "contactTeam": "Contact our team",
+    "returnHome": "Return home",
+    "viewPlatform": "View platform",
+    "useTemplate": "Use template",
+    "preview": "Preview",
+    "comingSoon": "Coming soon",
+    "illustrative": "Illustrative",
+    "placeholder": "Placeholder",
+    "example": "Example"
+  },
+  "hero": {
+    "badge": "AI infrastructure for modern teams",
+    "title": "Build the next layer of your business with AI.",
+    "subtitle": "Connect models, company knowledge, and business workflows in one secure AI platform.",
+    "modelAgnostic": "Model agnostic",
+    "enterpriseReady": "Enterprise ready",
+    "builtForDevs": "Built for developers"
+  },
+  "footer": {
+    "tagline": "NextLayer — The intelligent layer for modern business.",
+    "copyright": "© {year} NextLayer"
+  },
+  "whitelist": {
+    "title": "Early access required",
+    "description": "Registration and platform access are currently available by invitation only. Join the waitlist to request access.",
+    "joinWaitlist": "Join waitlist"
+  }
+}

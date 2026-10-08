@@ -1,0 +1,7 @@
+<svg width="160" height="32" viewBox="0 0 160 32" fill="none" xmlns="http://www.w3.org/2000/svg">
+  <rect x="0" y="20" width="24" height="3" rx="1" fill="#7157FF" opacity="0.4"/>
+  <rect x="2" y="14" width="20" height="3" rx="1" fill="#7157FF" opacity="0.65"/>
+  <rect x="4" y="8" width="16" height="3" rx="1" fill="#7157FF"/>
+  <path d="M4 8L12 4L20 8L12 12L4 8Z" fill="#5035E5" opacity="0.9"/>
+  <text x="32" y="22" font-family="system-ui, sans-serif" font-size="18" font-weight="500" fill="#111318">NextLayer</text>
+</svg>

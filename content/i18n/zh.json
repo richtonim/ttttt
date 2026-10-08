@@ -1,0 +1,40 @@
+{
+  "common": {
+    "startBuilding": "开始构建",
+    "bookDemo": "预约演示",
+    "learnMore": "了解更多",
+    "contactSales": "联系销售",
+    "viewDocs": "查看文档",
+    "exploreApi": "探索 API",
+    "signIn": "登录",
+    "startFree": "免费开始",
+    "talkToTeam": "联系团队",
+    "explorePlatform": "探索平台",
+    "contactTeam": "联系团队",
+    "returnHome": "返回首页",
+    "viewPlatform": "查看平台",
+    "useTemplate": "使用模板",
+    "preview": "预览",
+    "comingSoon": "即将推出",
+    "illustrative": "示例",
+    "placeholder": "占位",
+    "example": "示例"
+  },
+  "hero": {
+    "badge": "面向现代团队的 AI 基础设施",
+    "title": "使用 AI 构建企业的下一层智能能力。",
+    "subtitle": "在一个安全的 AI 平台中连接模型、企业知识和业务工作流程。",
+    "modelAgnostic": "模型无关",
+    "enterpriseReady": "企业就绪",
+    "builtForDevs": "为开发者打造"
+  },
+  "footer": {
+    "tagline": "NextLayer — 现代企业的智能层。",
+    "copyright": "© {year} NextLayer"
+  },
+  "whitelist": {
+    "title": "需要早期访问权限",
+    "description": "注册和平台访问目前仅限受邀用户。加入等候名单以申请访问权限。",
+    "joinWaitlist": "加入等候名单"
+  }
+}
