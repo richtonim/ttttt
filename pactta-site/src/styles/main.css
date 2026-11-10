@@ -94,6 +94,8 @@ a {
 
 .brand-logo {
   height: auto;
+  width: auto;
+  max-height: 32px;
 }
 
 .nav {
